@@ -360,24 +360,28 @@ commandline playfield.
 
 ## Weaving a Bespoke IDE Tapestry: Termux, Tmux, Neovim, and the Power of Lua
 
-Imagine an IDE woven from the threads of command-line powerhouses: Termux, Tmux, Neovim, and the 
-boundless tapestry of Lua. This isn't your run-of-the-mill development environment; it's a 
-meticulously crafted workspace, sculpted to your desires, and adaptable to your workflows. Let's 
-delve into the magic of this integrated ecosystem:
+Imagine an IDE woven from the colourful threads of commandline powerhouses: Termux, Tmux, Neovim, 
+and the boundless tapestry of Lua. This isn't your run-of-the-mill proprietary development 
+environment; it's a meticulously crafted workspace, sculpted to your desires, and adaptable to 
+your workflows. Let's delve into the potentiality and magic of this integrated ecosystem:
 
-**Termux:** Your mobile portal. This Android app grants you access to a Linux environment, 
-complete with a package manager and familiar tools like the GNU mainstay, and other FOSS toolsets.
-It's the foundation stone, the bedrock upon which everything rests.
+**Termux:** Your mobile portal. This Android app grants access to a GNU/Linux environment, 
+complete with a package manager and familiar tools like the GNU *NIX mainstay, and other 
+commandline FOSS toolsets. It's the foundation stone, the bedrock upon which everything rests.
 
 **Tmux:** The master of sessions and windows. Tmux orchestrates your workspace, splitting panes,
 stacking windows, and letting you navigate with lightning speed. Think of it as the architect, 
 defining the layout and flow of your IDE.
 
-**Neovim:** The Vim you know, except on party-drugs, augmented by intelligent design and 
-engineering. Neovim takes the legendary Vim editor (a fork of the pioneerint and ever-popular vi), 
-and injects it with superpowers. Extensive plugin support, Lua scripting, and asynchronous 
-operations, transform it into a versatile and limitlessly customisable, IDE platform. Neovim is 
-the canvas, ready to be painted with the vibrant strokes of plugins and customizations.
+**Neovim:** The vi or Vim you know, except on designer party-drugs, and further augmented by 
+intelligent design and impassioned engineering. Neovim takes the legendary Vim editor (a fork of 
+the pioneering and ever-popular vi), giving it a shot-in-the-arm, that results in hacktastic 
+superpowers. Extensive plugin support, and a playground for Lua scripting, and asynchronous 
+operations, transform Neovim into a versatile and limitlessly customisable, bespoke IDE platform.
+The fundamental building block in a GNU/Linux environment is code, and the vehicle of this code is 
+the textfile. This textfile forum, yields the granularity and power of GNU/Linux, which was 
+fundamentally inherited from pioneering *NIX., definable and redefinableNeovim is the canvas, 
+ready to be painted with the vibrant strokes of plugins and customizations.
 
 **Lua:** The brush that paints a thousand extensions. This scripting language unlocks Neovim's 
 true potential. Imagine:
