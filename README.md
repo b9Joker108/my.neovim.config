@@ -3,7 +3,7 @@
 <div style="width: 5cm; height: 5cm; border: 1px solid black;">
 <img src="/Sri.Yantra(3cm.sqr).jpg" alt="This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine." style="width: 100%; height: 100%; object-fit: cover;">
 </div>
-
+**To oversee this project and its realisation, I invoke Sri Yanta, unreservedly and with specificity.**
 This image is an anionic, devotional representation, of Sri Yanta, and it has been inset, with 
 devotion. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in 
 most dialects of contemporary English, and denotes a specific entity with its divine personality
@@ -22,8 +22,6 @@ to resize Sri Yanta. When this was ineffectual, I even pragmatically endeavoured
 resize the grapheme, and upload and embed. Mysteriously and perplexingly, the size of Sri Yantra
 remained constant. I interpret this as both the divine will and agency of Sri Yanta, intersecting 
 with my technical ineptitude and tomfoolery. 
-
-**To oversee this project and its realisation, I invoke Sri Yanta, unreservedly and with specificity.**
 
 # Evocation
 
