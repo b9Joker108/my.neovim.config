@@ -1,8 +1,13 @@
 # my.neovim.config
 
-This is a dedicated repository for my Neovim configuration. I decided to place it in its own 
-dedicated repository, rather than in my generic and inclusive Dotfiles repository, for ease 
-of discovery and visibility.
+This is a dedicated repository for my Neovim configuration. In reality, it includes a roadmap for 
+the realisation of a bespoke IDE within the augmented environment, of an Android operating system.
+It is the attendant construct, for a roadmap on shell scripting in Bash and Zsh, that I am 
+crafting and codifying, which is still under development, and yet to be published in its own 
+GitHub repository. I decided to place this config and its attendant information, it in its own 
+dedicated repository, rather than in my generic and inclusive Dotfiles repository, for ease of 
+discovery and visibility, and also for the functionalityband discoverability of its future project
+website, which will showcase this keystone, in the shell scripting roadmap I am divining.
 
 I am new to scripting, coding and programming. I have specifically chosen Android hand-held 
 devices for my scripting, programming and digital endeavours, due to their global ubiquity, 
