@@ -1,5 +1,17 @@
 # Invocation
 
+<style>
+  img[alt="descriptive alt text"] {
+    width: 154px; /* Adjust for visual approximation of 5cm */
+    height: 154px;
+    border: 1px solid #ddd; /* Optional frame border */
+    margin: 10px; /* Optional spacing */
+  }
+</style>
+
+![Descriptive alt text](/path/to/image.jpg)
+
+
 ...
 
 # Evocation
