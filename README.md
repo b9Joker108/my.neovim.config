@@ -1,13 +1,32 @@
+# Invocation
+
+...
+
+# Evocation
+
+...
+
+# Dedication 
+
+...
+
 # my.neovim.config
 
 This is a dedicated repository for my Neovim configuration. In reality, it includes a roadmap for 
-the realisation of a bespoke IDE within the augmented environment, of an Android operating system.
-It is the attendant construct, for a roadmap on shell scripting in Bash and Zsh, that I am 
-crafting and codifying, which is still under development, and yet to be published in its own 
-GitHub repository. I decided to place this config and its attendant information, it in its own 
-dedicated repository, rather than in my generic and inclusive Dotfiles repository, for ease of 
-discovery and visibility, and also for the functionalityband discoverability of its future project
-website, which will showcase this keystone, in the shell scripting roadmap I am divining.
+the realisation of a bespoke IDE within the augmented environment, of an Android operating system. 
+By documenting this roadmap, I intend for it to provide feedback to the developer community and 
+despell the arcane esotericism of this process for neophytes. This repository is the attendant 
+construct and mechanism, for another repository, that enshrines a roadmap on shell scripting in 
+Bash and Zsh, that I am crafting and codifying as I acquire *NIX shell scripting skills and their 
+functional and pragmatic propensities. This second shell-scripting roadmap, though quite developed
+(in theory), is yet to be roadtested (in practice), and its traverse and traveil, charted and 
+documented. As it is still under development and depends on the practical implementation of this 
+repository, it is yet to be in publishable version, housed in its own GitHub repository, herewith. 
+The two roadmap repositories are to be engaged and resourced in tandem. I decided to place this 
+config and its attendant information, it in its own dedicated repository, rather than in my 
+generic and inclusive Dotfiles repository, for ease of discovery and visibility, and also for the 
+functionality and discoverability of its future project website, which will showcase this 
+keystone, in the roadtested, shell scripting roadmap, I am divining.
 
 I am new to scripting, coding and programming. I have specifically chosen Android hand-held 
 devices for my scripting, programming and digital endeavours, due to their global ubiquity, 
