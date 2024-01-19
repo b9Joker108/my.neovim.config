@@ -32,7 +32,7 @@ with my technical ineptitude and tomfoolery.
 
 # Dedication 
 
-...
+To all those who have selflessly contributed to the magesty that is the FOSS ecosystem.
 
 # my.neovim.config
 
@@ -83,19 +83,18 @@ as syntax highlighting, linting, autocompletion, git control, etcetera.
 # Thanks to YouTube and Kickstart
 
 I initially started my foray into the world of Lua plugins for Neovim, with the Neovim 
-configuration kickstarter tool, called Kickstart, and hosted on GitHub, specifically created 
-and named, due to its purpose and ain, in providing users new to Neovim, a curated list of Lua 
-plugins deemed centeal and primary, to a beginner's journey on starting to use Neovim. I initially
-discovered Kickstart on YouTube, and had some problems with it, as one of the plugins in the 
-configuration file were not compatible with Android. I have not deleted the Lua plugin code, but 
-merely commented it, to make it ineffectual. The plugin that is incompatible to Android, is still 
-included in the following Kickstart list, that was the version of Kickstart that I implemented in
-late 2023. In addition to the plugin that is incompatible with Android architecture, there were 
-also a minimum of Lua syntax errors in the configuration file. The troublesome plugin and the 
-syntax issues, necessitate troubleshooting and whereby facilitated new skills, as they were 
-integrated into mThe Neovim subreddit was a readily available and accessible community that 
-provided support and assistance in repairing the syntax errors in my Lua plugin Neovim 
-configuration file: init.lua.
+configuration kickstarter tool, aptly named [Kickstart](https://github.com/nvim-lua/kickstart.nvim), and hosted on GitHub, specifically created and named, due to its purpose 
+and ain, in providing users new to Neovim, a curated list of Lua plugins deemed centeal and 
+primary, to a beginner's journey on starting to use Neovim. I initially discovered Kickstart on 
+YouTube, and had some problems with it, as one of the plugins in the configuration file were not
+compatible with Android. I have not deleted the Lua plugin code, but merely commented it, to make 
+it ineffectual. The plugin that is incompatible to Android, is still included in the following 
+Kickstart list, that was the version of Kickstart that I implemented in late 2023. In addition to 
+the plugin that is incompatible with Android architecture, there were also a minimum of Lua syntax
+errors in the configuration file. The troublesome plugin and the syntax issues, necessitate 
+troubleshooting and whereby facilitated new skills, as they were integrated into the Neovim 
+subreddit was a readily available and accessible community that provided support and assistance
+in repairing the syntax errors in my Lua plugin Neovim configuration file: init.lua.
 
 
 # my.neovim.config/
@@ -165,13 +164,9 @@ its markdown, learning from it and pilphering, as necessary.
 + [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
 ## Language Servers
 
-+ html
-
-
- 
-
-
-
+Generative AI, to edify, identified this subsection, which is unpopulated with the version of 
+Kickstart that I commenced my Neovim foray with. This informs me, that this is a plugin 
+functionality, I will need to research and populate.
 
 # Dotfyle website 
 
