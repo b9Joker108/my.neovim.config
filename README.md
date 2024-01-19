@@ -16,10 +16,14 @@ Neovim through researching Android IDEs and in my opinion, the more functional a
 personalised IDEs possible directly in an augmented Termux commandline environment. It was due 
 to YouTube, that my interest in Neovim was initially set and sealed.
 
+# Aspiration for a bespoke Termux commandline IDE
+
 My aspiration, is to create an excellent, intelligent and personalised IDE environment in Termux 
 on Android for shell scripting (Bash, Zsh, Sh, Fish, Nushell) and Python programming (initially), 
 using Neovim and Lua plugins. I require a combination of plugins for various functionalities such 
 as syntax highlighting, linting, autocompletion, git control, etcetera.
+
+# Thanks to YouTube and Kickstart
 
 I initially started my foray into the world of Lua plugins for Neovim, with the Neovim 
 configuration kickstarter tool, called Kickstart, and hosted on GitHub, specifically created 
@@ -31,9 +35,15 @@ configuration file. The Neovim subreddit was a readily available and accessible 
 provided support and assistance in repairing the syntax errors in my Lua plugin Neovim 
 configuration file: init.lua.
 
-I discovered this website, that is sourced in a GitHub repository, and it is excellent for 
+# Dotfyle website 
+
+I discovered the website Dotfyle, from the Neovim website. Both the Dotfyle and Neovim projects'
+websites sourcecode and domain is provided by GitHub, and are  housed in repositories therein. I
+plan on using both of them to inform the development of my personal GitHub website. The Dotfyle 
+website is an excellent interactive resource for 
 finding and comparing Neovim plugins, as well as referencing, resourcing and comparing other 
-peoples Neovim configuration files: 
+peoples' Neovim configuration files, it is located at the following address: 
+
 https://dotfyle.com
 
 
