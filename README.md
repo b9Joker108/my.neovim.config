@@ -195,6 +195,8 @@ https://dotfyle.com
 - **isort.nvim:** Integrates isort for Python import sorting.
 - **black.nvim:** Integrates black for Python code formatting.
 
+  https://youtu.be/jWZ_JeLgDxU?si=_wt8_VcLJWdlXDZq
+
 **General Productivity and UI:**
 
 - **vim-sneak:** Fast navigation by jumping to any character in the current buffer.
