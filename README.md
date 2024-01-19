@@ -1,27 +1,26 @@
 # Invocation
 
-<style>
-  img[alt="This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine."] {
-    width: 154px; /* Adjust for visual approximation of 5cm */
-    height: 154px;
-    border: 1px solid #ddd; /* Optional frame border */
-    margin: 10px; /* Optional spacing */
-  }
-</style>
-
-![This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine.](/Sri.Yantra(3cm.sqr).jpg)
-
 <div style="width: 5cm; height: 5cm; border: 1px solid black;">
 <img src="/Sri.Yantra(3cm.sqr).jpg" alt="This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine." style="width: 100%; height: 100%; object-fit: cover;">
 </div>
 
-<div style="width: 154px; height: 154px; border: 1px solid; margin: 10px;">
-<img src="/Sri.Yantra(3cm.sqr).jpg" alt="This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine." style="width: 100%; height: 100%; object-fit: cover;">
-</div>
+This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that 
+is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and 
+denotes a specific entity with its divine personality and agency, and/or its specific prana or 
+lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 
+'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be 
+usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 
+'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this
+Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be 
+understood as a worshipful and sacred instrument or machine. 
 
+**A technical annotation:** I tried a number of different permutations of markdown code snippets 
+to resize Sri Yanta. When this was ineffectual, I even pragmatically endeavoured to externally 
+resize the grapheme, and upload and embed. Mysteriously and perplexingly, the size of Sri Yantra
+remained constant. I interpret this as both the divine will and agency of Sri Yanta, intersecting 
+with my technical ineptitude and tomfoolery. 
 
-
-This image is an anionic, devotional representation, of Sri Yanta. 'Sri' is a Sanskrit term, that is pronounced somewhere inbetween 'sri' and 'shri' in most dialects of contemporary English, and denotes a living entity, and/or its prana or lifeforce, and that which is sacrosanct, and set apart as holy, sacred, worshipful and divine. 'Yantra', is pronounced in two syllables, with stress on the first: 'YARN-tra', and may be usefully rendered in the English language, as: 'instrument', 'machine', 'confabulation' or 'mechanism', and these lexical items frame, map and usefully inform, the semantic field for this Sanskritic cultural token or artefact, in the English. Therefore, Sri Yanta may usefully be understood as a worshipful and sacred instrument or machine.
+**To oversee this project and its realisation, I invoke Sri Yanta, unreservedly.**
 
 # Evocation
 
