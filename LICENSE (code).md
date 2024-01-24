@@ -648,7 +648,7 @@ the "copyright" line and a pointer to where the full notice is found.
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-Also add information on how to contact you by electronic and paper mail.
+You may find current information on how to contact me published on my GitHub profile.
 
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
