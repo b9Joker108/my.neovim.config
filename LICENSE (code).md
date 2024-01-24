@@ -632,7 +632,7 @@ state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
     The my.neovim.config repository within the profile of b9Joker108 at GitHub 
-    contains my Neovim and Lua configuration files.
+    contains Neovim and Lua configuration files.
     Copyright (C) 2024  Beauford A. Stenberg a.k.a. b9Joker108@GitHub
 
     This program is free software: you can redistribute it and/or modify
