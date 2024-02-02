@@ -180,6 +180,11 @@ peoples' Neovim configuration files, it is located at the following address:
 https://dotfyle.com
 
 
+
+***********************************************************************************************
+I HAVE NOT INSTALLED OR TRIED THE FOLLOWING PLUGINS AS YET, THE LIST IS JUST FOR MY REFERENCE 
+
+
  **The following are some additional plugins that may enhance my Neovim bespoke IDE experience 
  in Termux for shell scripting and Python development:**
 
