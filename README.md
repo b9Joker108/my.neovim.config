@@ -177,9 +177,15 @@ website is an excellent interactive resource for
 finding and comparing Neovim plugins, as well as referencing, resourcing and comparing other 
 peoples' Neovim configuration files, it is located at the following address: 
 
-https://dotfyle.com
+https://dotfyle.com (accessed: Sunday, April 07, 2024)
 
+***********************************************************************************************
 
+This YouTube video on Neovim configuration, showcases the developer's amazing insight into Neovim, the Neovim plugin ecosystem, their own Lua programming excellent, and foregrounds how to practically employ Neovim in a development workflow:
+
+https://youtu.be/6pAG3BHurdM?si=qAug4EfiKG_MwnVq (accessed: Sunday, April 07, 2024)
+
+It deserves repeated viewing, whilst following along in the terminal. 
 
 ***********************************************************************************************
 I HAVE NOT INSTALLED OR TRIED THE FOLLOWING PLUGINS AS YET, THE LIST IS JUST FOR MY REFERENCE 
