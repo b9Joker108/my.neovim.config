@@ -213,11 +213,129 @@ https://dotfyle.com (accessed: Sunday, April 07, 2024)
 
 ***********************************************************************************************
 
-This YouTube video on Neovim configuration, showcases the developer's amazing insight into Neovim, the Neovim plugin ecosystem, their own Lua programming excellent, and foregrounds how to practically employ Neovim in a development workflow:
+This YouTube video on Neovim configuration, showcases the developer, Josean's amazing insight into 
+Neovim, the Neovim plugin ecosystem, their own Lua programming excellent, and foregrounds how to 
+practically employ Neovim in a development workflow:
 
 https://youtu.be/6pAG3BHurdM?si=qAug4EfiKG_MwnVq (accessed: Sunday, April 07, 2024)
 
 It deserves repeated viewing, whilst following along in the terminal. 
+
+I was watching this YouTube video and I was just amazed by Josean's skills: 
+
+https://youtu.be/6pAG3BHurdM?si=sv4YbsOvqhJNRejT 
+
+I resolved to give his configurations a try locally. So, I used git to install Josean's Neovim config locally in Termux. I followed this process. 
+
+To download a specific directory from a GitHub repository, you can use the sparse-checkout feature of Git, which allows you to check out only a subdirectory within a repository. Here’s how you can do it:
+
+1. Initialize a new Git repository on your local machine:
+
+`mkdir nvim-config cd nvim-config git init`
+
+2. Add the remote repository:
+
+`git remote add -f origin https://github.com/josean-dev/dev-environment-files.git`
+
+3. Enable sparse-checkout:
+
+`git config core.sparseCheckout true`
+
+4. Define the subdirectory you want to check out. In this case, .config/nvim:
+
+`echo '.config/nvim/*' >> .git/info/sparse-checkout`
+
+5. Pull the specified directory from the remote repository:
+
+`git pull origin main`
+ 
+After these steps, you should have only the .config/nvim directory and its contents in your local nvim-config directory.
+
+From what I can ascertain, this process worked well. It replicated the subdirectory repository structure and its contents, recursively, to the letter, where 'tree' is 'nvim':
+
+```zsh
+❯ tree                                                                                                .
+├── after
+│   └── queries
+│       └── ecma
+│           └── textobjects.scm
+├── init.lua
+├── lazy-lock.json
+└── lua
+    └── josean
+        ├── core
+        │   ├── init.lua
+        │   ├── keymaps.lua
+        │   └── options.lua
+        ├── lazy.lua
+        └── plugins
+            ├── alpha.lua
+            ├── auto-session.lua
+            ├── autopairs.lua
+            ├── bufferline.lua
+            ├── colorscheme.lua
+            ├── comment.lua
+            ├── dressing.lua
+            ├── formatting.lua
+            ├── gitsigns.lua
+            ├── indent-blankline.lua
+            ├── init.lua
+            ├── lazygit.lua
+            ├── linting.lua
+            ├── lsp
+            │   ├── lspconfig.lua
+            │   └── mason.lua
+            ├── lualine.lua
+            ├── nvim-cmp.lua
+            ├── nvim-tree.lua
+            ├── nvim-treesitter-text-objects.lua
+            ├── substitute.lua
+            ├── surround.lua
+            ├── telescope.lua
+            ├── todo-comments.lua
+            ├── treesitter.lua
+            ├── trouble.lua
+            ├── vim-maximizer.lua
+            └── which-key.lua
+```
+
+I launch the specific Neovim config on my Termux with:
+
+`nvim -u ~/nvim-config/.config/nvim/init.lua`
+
+But, I have the following errors, and I am not sure how to repair them:
+
+```nvim
+Error detected while processing /data/data/com.termux/files/home/nvim-config/.config/nvim/init.lua:
+E5113: Error while calling lua chunk: .../com.termux/files/home/nvim-config/.config/nvim/init.lua:1: m
+odule 'josean.core' not found:
+        no field package.preload['josean.core']
+        no file './josean/core.lua'
+        no file '/data/data/com.termux/files/usr/share/luajit-2.1.0-beta3/josean/core.lua'
+        no file '/usr/local/share/lua/5.1/josean/core.lua'
+        no file '/usr/local/share/lua/5.1/josean/core/init.lua'
+        no file '/data/data/com.termux/files/usr/share/lua/5.1/josean/core.lua'
+        no file '/data/data/com.termux/files/usr/share/lua/5.1/josean/core/init.lua'
+        no file './josean/core.so'
+        no file '/usr/local/lib/lua/5.1/josean/core.so'
+        no file '/data/data/com.termux/files/usr/lib/lua/5.1/josean/core.so'
+        no file '/usr/local/lib/lua/5.1/loadall.so'
+        no file './josean.so'
+        no file '/usr/local/lib/lua/5.1/josean.so'
+        no file '/data/data/com.termux/files/usr/lib/lua/5.1/josean.so'
+        no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+        [C]: in function 'require'
+        .../com.termux/files/home/nvim-config/.config/nvim/init.lua:1: in main chunk
+Press ENTER or type command to continue
+```
+
+Is there a command I may enter here to repair and initialise the system and load the plugins locally? 
+
+I have ventured a few tweaks, but haven't been successful in resolving the issues. My Neovim and Lua skills are very nooby and rudimentary. 
+
+Any assistance greatly appreciated. 
+ 
 
 ***********************************************************************************************
 I HAVE NOT INSTALLED OR TRIED THE FOLLOWING PLUGINS AS YET, THE LIST IS JUST FOR MY REFERENCE 
