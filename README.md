@@ -200,6 +200,10 @@ Generative AI, to edify, identified this subsection, which is unpopulated with t
 Kickstart that I commenced my Neovim foray with. This informs me, that this is a plugin 
 functionality, I will need to research and populate.
 
+# My Personal Issues with Kickstart Due to My Ineptitude
+
+I have learnt much about Lua, often fixing issues with the Kickstart Neovim configuration, more than using it. I have noted a lot of developers on YouTube saying directly or in passing, at once both jocular and serious, that they spent more time tinkering with their Neovim configurations, than they do coding. Tinkering with Un*x/*NIX configurations, is a joy, addictive, a powerful asset, but also aa serious time-sink and hence, also a liability. There is definitely more of an upside, than a downside, given the granularity and customisability. I am often endeavouring to develop the base configuration of Kickstart, and as a result, my Neovim configuration is often broken and unusable. Neovim doesn't load if the syntax of the configuration is unsound. Lua is unforgiving. As a result of my Neovim configuration being unusable, I often fall back upon editing with vanilla Vim, without any plugins. Just recently, whilst endeavouring to fix another nooby error with Kickstart, a person assising me on Reddit, within the Neovim subreddit, posted a flagged and annotated version of the current version of Kickstart. I didn't commence with Kickstart long ago, only a few months, and I saw in the annotated example, that it had been significantly added to, and iterated, since the version I commenced. I haven't yet altered my currenr broken local installation, and implemented the new Kickstart version. I have kind of been playing hide and seek with it and doing other things. I have been focusing on integrating the Dotly dotfiles management system and framework locally. This is actually a significant endeavour given that I have circa eighteen (18) different shells installed in my beloved Termux, and I have also been coding snippets of shell functions, as well as shell scripts, most days. I will delete my current broken install of Kickstart, and install the new one.
+
 # Dotfyle website 
 
 I discovered the website Dotfyle, from the Neovim website. Both the Dotfyle and Neovim projects'
@@ -223,7 +227,7 @@ It deserves repeated viewing, whilst following along in the terminal.
 
 I was watching this YouTube video and I was just amazed by Josean's skills: 
 
-https://youtu.be/6pAG3BHurdM?si=sv4YbsOvqhJNRejT 
+https://youtu.be/6pAG3BHurdM?si=sv4YbsOvqhJNRejT (accessed: Monday, April 08, 2024)
 
 I resolved to give his configurations a try locally. So, I used git to install Josean's Neovim config locally in Termux. I followed this process. 
 
@@ -231,23 +235,23 @@ To download a specific directory from a GitHub repository, you can use the spars
 
 1. Initialize a new Git repository on your local machine:
 
-`mkdir nvim-config cd nvim-config git init`
+```mkdir nvim-config cd nvim-config git init```
 
 2. Add the remote repository:
 
-`git remote add -f origin https://github.com/josean-dev/dev-environment-files.git`
+```git remote add -f origin https://github.com/josean-dev/dev-environment-files.git```
 
 3. Enable sparse-checkout:
 
-`git config core.sparseCheckout true`
+```git config core.sparseCheckout true```
 
 4. Define the subdirectory you want to check out. In this case, .config/nvim:
 
-`echo '.config/nvim/*' >> .git/info/sparse-checkout`
+```echo '.config/nvim/*' >> .git/info/sparse-checkout```
 
 5. Pull the specified directory from the remote repository:
 
-`git pull origin main`
+```git pull origin main```
  
 After these steps, you should have only the .config/nvim directory and its contents in your local nvim-config directory.
 
