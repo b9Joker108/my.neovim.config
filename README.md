@@ -337,7 +337,13 @@ layered on to that of Termux. So, actually extending these, and also using (a) d
 multiplexer application(s), will add a third or even potentially more, multiplexing layer(s). The 
 possibilities of Termux for coding, software engineering, developing and hacking, is truly quite 
 daunting, as well as incredible, and growing, extending and becomong more sophisticated, all the time. 
-So many people have no idea about the facility, amenity, capability and sophistication, of the Termux ecosystem, even the technologically inclined. There are no published works of quality to support the uptake of Termux. My work will go some way to redress this.
+So many people have no idea about the facility, amenity, capability and sophistication, of the Termux 
+ecosystem, even the technologically inclined. There are no published works of quality to support the 
+uptake of Termux. My work will go some way to redress this.
+
+I forked Joseon's repository that contained his Neovim configuration" principally, as I want to 
+generate a report of the Neovim config, through Dotfyles, for my own edification, usage, for 
+annotation, and for my Skriptkiddie project.
  
 
 ***********************************************************************************************
