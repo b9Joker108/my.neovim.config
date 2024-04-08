@@ -235,30 +235,40 @@ To download a specific directory from a GitHub repository, you can use the spars
 
 1. Initialize a new Git repository on your local machine:
 
-```mkdir nvim-config cd nvim-config git init```
+```zsh
+mkdir nvim-config cd nvim-config git init
+```
 
 2. Add the remote repository:
 
-```git remote add -f origin https://github.com/josean-dev/dev-environment-files.git```
+```zsh
+git remote add -f origin https://github.com/josean-dev/dev-environment-files.git
+```
 
 3. Enable sparse-checkout:
 
-```git config core.sparseCheckout true```
+```zsh
+git config core.sparseCheckout true
+```
 
 4. Define the subdirectory you want to check out. In this case, .config/nvim:
 
-```echo '.config/nvim/*' >> .git/info/sparse-checkout```
+```zsh
+echo '.config/nvim/*' >> .git/info/sparse-checkout
+```
 
 5. Pull the specified directory from the remote repository:
 
-```git pull origin main```
+```zsh
+git pull origin main
+```
  
 After these steps, you should have only the .config/nvim directory and its contents in your local nvim-config directory.
 
-From what I can ascertain, this process worked well. It replicated the subdirectory repository structure and its contents, recursively, to the letter, where 'tree' is 'nvim':
+From what I can ascertain, this process worked well. It replicated the subdirectory repository structure and its contents, recursively, to the letter, where 'tree' is 'nvim'  (which was similarly called by Josean):
 
 ```zsh
-❯ tree                                                                                                .
+❯ tree                                                                                          
 ├── after
 │   └── queries
 │       └── ecma
