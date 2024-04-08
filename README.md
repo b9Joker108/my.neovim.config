@@ -313,11 +313,24 @@ From what I can ascertain, this process worked well. It replicated the subdirect
             └── which-key.lua
 ```
 
-With the help of generative AI, Internet searches, and extensive trial and error, and tinkering, I have managed to get a portion of Josean`s configutation installed locally, and have commenced using it, writing some nascent Python:
+With the help of generative AI, Internet searches, and extensive trial and error, and ernest tinkering, I 
+have managed to get a portion of Josean`s configutation installed locally, and have commenced using it, 
+writing some nascent Python:
 
+https://www.reddit.com/r/neovim/s/RQFSs39oKq (accessed: Tuesday, April 09, 2024)
 
+In addition to the new bespoke IDE install, I now know how to have multiple Neovim configurations
+and plugin ecosystems in the one environment. I have also learnt how to launch Neovim in default or 
+failsafe mode, without any configuration, if it is broken, for example.
 
-There is so much to learn from both Kickstart and Josean, and integrating the learning, and eventually truly building my own bespoke IDE, for various workflows, is the journey.
+There is so much to learn from both Kickstart and Josean, and it will take quite some time integrating 
+the learnings, developing with them effectively and efficiently, and eventually truly building my own 
+bespoke IDE, for various workflows, is a significant part of the journey I have set myself on, when I 
+commenced the 'A Fable of the Skriptkiddie Scriptoria', shell scripting roadmap, book and project.
+
+I plan to write a function or a script, to automate initialising, and logging on to, different Neovim
+configurations on my system, and document it. Termux has some built-in rudimentary terminal multiplexing capability hard-coded into the functionality of the Android app. And, watching Josean on YouTube, I now appreciate that the Neovim plugin ecosystem and exstensibility, also provides additional, and sophisticated, multiplexing functionality, layered on to that of Termux. So, actually also using (a) dedicated terminal multiplexer application(s), will add a third or even potentially more, multiplexing layer(s). The possibilities of Termux for coding, software engineering, developing and hacking, is truly quite daunting, as well as incredible, and 
+growing, extending and becomong more sophisticated, all the time. So many people have no idea about the facility and sophisticated of the Termux ecosystem, even the technologically inclined. There are no published works of qualiry to support the uptake of Termux. My work will go some way to redress this.
  
 
 ***********************************************************************************************
