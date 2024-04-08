@@ -28,7 +28,39 @@ with my technical ineptitude and tomfoolery.
 
 # Evocation
 
-...
+**Devanagari:**
+
+वज्रतुंड महाकाय सूर्यकोटि समप्रभ
+निर्विघ्नं कुरु मे देवं सर्वकार्येषु सर्वदा
+
+**IAST:**
+
+vajratuṇḍa mahākāya sūryakoṭi samaprabha
+nirvighnaṃ kuru me devam sarvakāryeṣu sarvadā
+
+**Meaning:**
+
+"O Lord with a diamond trunk, huge body, and brilliance like the sun, please make all my tasks free 
+of obstacles always."
+
+This verse is a prayer to Lord Ganesha, the Sanatana Dharma (Hinduism) ishta-devata (tutelary deity) 
+of wisdom and remover of obstacles. It is often recited at the beginning of any new task or undertaking
+to seek the blessings of Lord Ganesha.
+
+Here is a breakdown of the meaning of each word in the verse:
+
+* **Vajratunda:** "diamond trunk" - refers to Lord Ganesha's trunk, which is said to be as strong as
+  a diamond.
+* **Mahakaya:** "huge body" - refers to Lord Ganesha's large and powerful body.
+* **Suryakoti samaprabha:** "brilliance like the sun" - refers to Lord Ganesha's radiant aura, which
+  is said to be as bright as the sun.
+* **Nirvighnam:** "free of obstacles" - refers to the ability of Lord Ganesha to remove obstacles
+  from our path.
+* **Kuru:** "make" - a verb that means to do or create something.
+* **Me:** "me" - the first person singular pronoun.
+* **Devam:** "god" - refers to Lord Ganesha.
+* **Sarvakāryeṣu:** "in all tasks" - refers to all the tasks or undertakings that we may have.
+* **Sarvadā:** "always" - refers to all times or at all times.
 
 # Dedication 
 
