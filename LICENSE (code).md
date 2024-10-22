@@ -638,7 +638,8 @@ the "copyright" line and a pointer to where the full notice is found.
     that are derived from a fork and further 
     development of the work done by 
     https://github.com/Matt-FTW/dotfiles/.config/nvim 
-    with the last commit of ee8665d dated Sunday, October 20, 2024, using the same license.
+    with the last commit of ee8665d dated Sunday, 
+    October 20, 2024, using the same license.
     Copyright (C) 2024  Beauford A. Stenberg a.k.a. 
     b9Joker108@GitHub
 
