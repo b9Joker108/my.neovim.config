@@ -631,19 +631,31 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    The my.neovim.config repository within the profile of b9Joker108 at GitHub https://github.com/b9Joker108/my.neovim.config
-    contains Neovim and Lua configuration files that are derived from a fork and further development of the work done by https://github.com/Matt-FTW/dotfiles/.config/nvim with the last commit of ee8665d dated Sunday, October 20, 2024, using the same license.
-    Copyright (C) 2024  Beauford A. Stenberg a.k.a. b9Joker108@GitHub
+    The my.neovim.config repository within the 
+    profile of b9Joker108 at GitHub 
+    https://github.com/b9Joker108/my.neovim.config
+    contains Neovim and Lua configuration files 
+    that are derived from a fork and further 
+    development of the work done by 
+    https://github.com/Matt-FTW/dotfiles/.config/nvim 
+    with the last commit of ee8665d dated Sunday, October 20, 2024, using the same license.
+    Copyright (C) 2024  Beauford A. Stenberg a.k.a. 
+    b9Joker108@GitHub
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
+    This program is free software: you can 
+    redistribute it and/or modify
+    it under the terms of the GNU General Public 
+    License as published by
+    the Free Software Foundation, either version 3 
+    of the License, or
     (at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    This program is distributed in the hope that it 
+    will be useful, but WITHOUT ANY WARRANTY; 
+    without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+    PURPOSE. See the GNU General Public License for 
+    more details.
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
