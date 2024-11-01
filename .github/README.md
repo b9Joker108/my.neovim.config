@@ -1000,7 +1000,7 @@ My current usecase for a Personalized Development Environment (PDE) is principal
 This order prioritizes core functionality for scripting and development in Termux, starting with essential plugins for managing other plugins, syntax highlighting, language server support, and autocompletion. It then moves on to tools for navigation, Git integration, and terminal usage, which are crucial for scripting workflows. The later plugins add more advanced features like debugging, formatting, and enhanced navigation, which can significantly boost productivity once you're comfortable with the basics.
 
 Citations:
-[1] How to Setup a Development Environment for Shell 
+[1] How to Setup a Development Environment for Shell
 Scripting in Linux 
 https://www.baeldung.com/linux/shell-scripting-setup-development-environment
 [2] The perfect Neovim setup for Python - YouTube 
