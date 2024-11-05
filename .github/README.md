@@ -1257,13 +1257,17 @@ lua/plugins/extras/coding/cmp/cmp.lua
 
 **Plugin Declaration**: Specifies hrsh7th/nvim-cmp 
 along with dependencies.
+
 **Event Triggers**: Loads the plugin on InsertEnter
 and CmdlineEnter to optimize startup time.
+
 **Dependencies**:
-  **Completion Sources**: Adds LSP, buffer, path, and 
+
+>  **Completion Sources**: Adds LSP, buffer, path, and 
 command-line completion sources.
-  **Snippet Support**: Includes LuaSnip and its completion 
-source for snippet expansion.
+> 
+>  **Snippet Support**: Includes LuaSnip and its completion source for snippet expansion.
+
 **Configuration Function**: Sets up the completion 
 behaviour and key mappings.
 
