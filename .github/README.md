@@ -589,4 +589,662 @@ https://www.youtube.com/watch?v=4BnVeOUeZxc
 https://github.com/rockerboo/awesome-neovim
 
 
+# Neovim Configuration Structure Explained
 
+Thos Neovim bespoke PDE distribution configuration 
+is organized thoughtfully to enhance maintainability 
+and scalability. This section endeavours to provide 
+a detailed explanation of the Neovim setup, focusing 
+on the files and directories that the developer using
+itvare likely to interact with and update frequently 
+to keep the workflow smooth and efficient.
+
+---
+
+## Overview
+
+The configuration is structured as follows:
+
+```
+.
+├── after/
+├── dotfyle.json
+├── init.lua
+├── lazy-lock.json
+├── lazyvim.json
+├── lua/
+│   ├── config/
+│   └── plugins/
+│       ├── disabled.lua
+│       ├── extras/
+│       └── lazyvim/
+├── mason-lock.json
+├── rules/
+├── snippets/
+├── spell/
+├── stylua.toml
+└── templates/
+```
+
+---
+
+## Root Directory Files
+
+### `init.lua`
+
+- **Purpose**: The main entry point for Neovim configuration.
+- **Interaction**: You'll frequently update this file to require modules and set up core configurations.
+
+### `dotfyle.json` & `lazyvim.json`
+
+- **Purpose**: Configuration files probably related to plugin management and settings synchronization.
+- **Interaction**: Update these when you change plugin settings or synchronize configurations across machines.
+
+### `lazy-lock.json` & `mason-lock.json`
+
+- **Purpose**: Lockfiles that ensure consistent plugin and language server versions.
+- **Interaction**: These are updated automatically when you install or update plugins and LSP servers. Generally, you don't edit them manually.
+
+### `stylua.toml`
+
+- **Purpose**: Configuration for the [StyLua](https://github.com/JohnnyMorganz/StyLua) formatter, which formats Lua code.
+- **Interaction**: Modify this file to change formatting rules for your Lua code.
+
+---
+
+## Directories
+
+### `after/`
+
+- **Purpose**: Contains filetype-specific plugin configurations.
+- **Structure**:
+
+  ```
+  after/
+  └── ftplugin/
+      ├── javascriptreact.lua
+      ├── json.lua
+      ├── jsonc.lua
+      ├── markdown.lua
+      └── typescriptreact.lua
+  ```
+
+- **Interaction**: Update these files to adjust settings for specific file types after all plugins have loaded.
+
+### `lua/`
+
+- **Purpose**: Contains Lua modules for configurations and plugins.
+- **Structure**:
+
+  ```
+  lua/
+  ├── config/
+  │   ├── autocmds.lua
+  │   ├── keymaps.lua
+  │   ├── lazy.lua
+  │   └── options.lua
+  └── plugins/
+      ├── disabled.lua
+      ├── extras/
+      └── lazyvim/
+  ```
+
+#### `lua/config/`
+
+- **Files**:
+  - `autocmds.lua`: Neovim autocommands for automating tasks.
+  - `keymaps.lua`: Custom keybindings.
+  - `lazy.lua`: Configuration for the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager.
+  - `options.lua`: General Neovim settings.
+- **Interaction**: Frequently edit these to customize behaviors, keybindings, and settings.
+
+#### `lua/plugins/`
+
+- **Purpose**: Plugin configurations organized for clarity.
+- **Key Files and Directories**:
+  - `disabled.lua`: List of plugins to disable.
+  - `extras/`: Additional plugins categorized by functionality.
+  - `lazyvim/`: Configurations specific to LazyVim.
+
+##### `extras/`
+
+- **Categories**:
+  - `coding/`
+  - `dap/` (Debug Adapter Protocol)
+  - `editor/`
+  - `formatting/`
+  - `lang/` (Language-specific settings)
+  - `linting/`
+  - `lsp/` (Language Server Protocol)
+  - `ui/` (User Interface)
+  - `util/` (Utilities)
+
+- **Interaction**:
+  - **Adding/Removing Plugins**: Edit or create files within these directories to manage plugins.
+  - **Customizing Plugins**: Update the Lua files corresponding to plugins you use to tweak their settings.
+
+### `rules/`
+
+- **Purpose**: Configuration files for linters and formatters.
+- **Files**:
+
+  ```
+  rules/
+  ├── biome.json
+  ├── cspell.json
+  ├── rustfmt.toml
+  └── stylua.toml
+  ```
+
+- **Interaction**: Modify these to adjust code style rules for different languages and tools.
+
+### `snippets/`
+
+- **Purpose**: Houses code snippets for various languages.
+- **Structure**:
+
+  ```
+  snippets/
+  ├── languages/
+  │   ├── css.json
+  │   ├── global.json
+  │   ├── lua.json
+  │   ├── markdown.json
+  │   └── python/
+  │       └── python.json
+  ├── package.json
+  └── projects/
+      └── nvim.json
+  ```
+
+- **Interaction**:
+  - **Adding Snippets**: Create or edit `.json` files to add new snippets.
+  - **Organizing Snippets**: Place them under `languages/` or `projects/` as appropriate.
+
+### `spell/`
+
+- **Purpose**: Custom spell check dictionaries.
+- **Files**:
+
+  ```
+  spell/
+  ├── en.utf-8.add
+  ├── en.utf-8.add.spl
+  ├── en.utf-8.spl
+  ├── en.utf-8.sug
+  ├── es.utf-8.spl
+  └── es.utf-8.sug
+  ```
+
+- **Interaction**: Update `.add` files to add new words to the spell checker.
+
+### `templates/`
+
+- **Purpose**: Boilerplate templates for new files.
+- **Structure**:
+
+  ```
+  templates/
+  ├── LICENSE/
+  │   ├── Apache2.0
+  │   ├── GNUGPLv3
+  │   ├── MIT
+  │   └── Unlicensed
+  ├── go/
+  │   └── main.go
+  ├── html/
+  │   └── index.html
+  ├── python/
+  │   └── main.py
+  └── vue/
+      └── component.vue
+  ```
+
+- **Interaction**: Modify existing templates or add new ones to streamline the creation of standard files.
+
+---
+
+## Notable Plugin Configurations
+
+Given the extensive list of plugins, here are some categories and examples:
+
+### Coding Enhancements (`extras/coding/`)
+
+- **AI Assistance**: `codeium.lua`, `copilot.lua`, `gpt.lua`
+- **Autocompletion Extras**: `cmp/emoji.lua`, `cmp/npm.lua`
+- **Snippets and Snippet Runners**: `luasnip-extended.lua`, `sniprun.lua`
+- **Treesitter Plugins**: Advanced code parsing features like `endwise.lua`, `text-case.lua`
+
+**Interaction**: Update these configurations to enhance coding workflows and integrate new AI tools.
+
+### Language Specific Settings (`extras/lang/`)
+
+- **Web Development**: `angular-extended.lua`, `typescript-extended.lua`, `vue-3-extended.lua`
+- **Scripting Languages**: `python-extended.lua`, `bash.lua`
+- **Others**: `go-extended.lua`, `rust-extended.lua`
+
+**Interaction**: Modify these to customize language server settings, linters, and formatters for specific languages.
+
+### User Interface Enhancements (`extras/ui/`)
+
+- **Status Lines and Tabs**: `lualine-extended.lua`, `bufferline-extended.lua`
+- **Color Schemes**: A vast collection under `colorschemes/`
+- **Notifications and Pop-ups**: `noice-extended.lua`, `nvim-notify-extended.lua`
+
+**Interaction**: Personalize the look and feel of your editor by tweaking these configurations.
+
+### Utilities (`extras/util/`)
+
+- **Session Management**: `persisted.lua`, `persistence-extended.lua`
+- **Productivity Tools**: `autosave.lua`, `hardtime.lua`, `smart-splits.lua`
+- **Miscellaneous**: `wakatime.lua` for coding analytics, `discordrcp.lua` for Discord Rich Presence
+
+**Interaction**: Enable or disable these utilities based on your workflow preferences.
+
+---
+
+## How to Keep It Running Like a Well-Oiled Machine
+
+1. **Regular Updates**:
+   - Run plugin updates periodically using your plugin manager.
+   - Keep language servers and formatters up-to-date.
+
+2. **Manage Plugins**:
+   - Review plugins in `lua/plugins/` regularly.
+   - Disable or remove plugins you no longer need via `disabled.lua`.
+
+3. **Customize Keybindings**:
+   - Adjust `keymaps.lua` to introduce new shortcuts or modify existing ones.
+
+4. **Optimize Performance**:
+   - For large files, consider adjusting settings in `bigfile.lua` under `extras/util/`.
+
+5. **Stay Consistent with Formatting**:
+   - Ensure `stylua.toml`, `rustfmt.toml`, and other formatter configs under `rules/` are set to your preferred styles.
+
+6. **Expand Snippet Libraries**:
+   - Add new snippets to speed up coding in `snippets/languages/`.
+
+7. **Spell Check and Dictionaries**:
+   - Update `spell/en.utf-8.add` with custom words to enhance spell checking.
+
+8. **Leverage Templates**:
+   - Use files in `templates/` when starting new projects or files to maintain consistency.
+
+---
+
+## Conclusion
+
+This Neovim configuration is robust and tailored to 
+a comprehensive development experience. By 
+understanding the structure and purpose of each file 
+and directory, one may efficiently manage and 
+customize the setup to keep it running smoothly. 
+Regular interaction with key configuration files and 
+a proactive approach to managing plugins and settings 
+will ensure the Neovim environment remains efficient 
+and enjoyable to use.
+
+# Configuration File Structure Tree Diagram
+
+```shell
+❯ tree
+.
+├── after
+│   └── ftplugin
+│       ├── javascriptreact.lua
+│       ├── json.lua
+│       ├── jsonc.lua
+│       ├── markdown.lua
+│       └── typescriptreact.lua
+├── dotfyle.json
+├── init.lua
+├── lazy-lock.json
+├── lazyvim.json
+├── lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   └── options.lua
+│   └── plugins
+│       ├── disabled.lua
+│       ├── extras
+│       │   ├── coding
+│       │   │   ├── ai
+│       │   │   │   ├── avante.lua
+│       │   │   │   ├── codecompanion.lua
+│       │   │   │   ├── codeium.lua
+│       │   │   │   ├── copilot.lua
+│       │   │   │   ├── gen.lua
+│       │   │   │   ├── gpt.lua
+│       │   │   │   └── neocodeium.lua
+│       │   │   ├── annotation.lua
+│       │   │   ├── cmp
+│       │   │   │   ├── autopairs.lua
+│       │   │   │   ├── dotenv.lua
+│       │   │   │   ├── emoji.lua
+│       │   │   │   ├── fonts.lua
+│       │   │   │   ├── nerd-fonts.lua
+│       │   │   │   ├── npm.lua
+│       │   │   │   ├── rg.lua
+│       │   │   │   ├── under-comparator.lua
+│       │   │   │   └── yanky.lua
+│       │   │   ├── cmp-extended.lua
+│       │   │   ├── debugprint.lua
+│       │   │   ├── ibus.lua
+│       │   │   ├── luasnip-extended.lua
+│       │   │   ├── multicursor.lua
+│       │   │   ├── recorder.lua
+│       │   │   ├── refactoring.lua
+│       │   │   ├── snippets.lua
+│       │   │   ├── sniprun.lua
+│       │   │   ├── treesitter
+│       │   │   │   ├── auto-indent.lua
+│       │   │   │   ├── endwise.lua
+│       │   │   │   ├── guess-indent.lua
+│       │   │   │   ├── mini-align.lua
+│       │   │   │   ├── node-action.lua
+│       │   │   │   ├── puppeteer.lua
+│       │   │   │   ├── sibling-swap.lua
+│       │   │   │   ├── spider.lua
+│       │   │   │   ├── text-case.lua
+│       │   │   │   ├── various-textobjs.lua
+│       │   │   │   └── wildfire.lua
+│       │   │   ├── ultimate-autopair.lua
+│       │   │   └── yanky-extended.lua
+│       │   ├── dap
+│       │   │   ├── core-extended.lua
+│       │   │   ├── persistent-breakpoints.lua
+│       │   │   ├── repl-highlights.lua
+│       │   │   └── telescope.lua
+│       │   ├── editor
+│       │   │   ├── carbon-now.lua
+│       │   │   ├── ccc.lua
+│       │   │   ├── codesnap.lua
+│       │   │   ├── compiler.lua
+│       │   │   ├── dev-container.lua
+│       │   │   ├── docs
+│       │   │   │   ├── devdocs.lua
+│       │   │   │   ├── neorg.lua
+│       │   │   │   ├── obsidian.lua
+│       │   │   │   └── peek.lua
+│       │   │   ├── five-server.lua
+│       │   │   ├── flash-extended.lua
+│       │   │   ├── fold.lua
+│       │   │   ├── git
+│       │   │   │   ├── diffview.lua
+│       │   │   │   ├── git-conflict.lua
+│       │   │   │   ├── gitgraph.lua
+│       │   │   │   ├── github-extended.lua
+│       │   │   │   ├── neogit.lua
+│       │   │   │   └── worktree.lua
+│       │   │   ├── gitsigns-extended.lua
+│       │   │   ├── hover.lua
+│       │   │   ├── leap-spooky.lua
+│       │   │   ├── live-server.lua
+│       │   │   ├── markmap.lua
+│       │   │   ├── marks
+│       │   │   │   ├── arrow.lua
+│       │   │   │   ├── bookmarks.lua
+│       │   │   │   ├── grapple.lua
+│       │   │   │   ├── harpoon-extended.lua
+│       │   │   │   └── mini-visits.lua
+│       │   │   ├── neo-tree-extended.lua
+│       │   │   ├── numb.lua
+│       │   │   ├── oil.lua
+│       │   │   ├── outline-extended.lua
+│       │   │   ├── package-info.lua
+│       │   │   ├── regex.lua
+│       │   │   ├── retirement.lua
+│       │   │   ├── search-replace.lua
+│       │   │   ├── spectre.lua
+│       │   │   ├── ssr.lua
+│       │   │   ├── suda.lua
+│       │   │   ├── tabscope.lua
+│       │   │   ├── telescope
+│       │   │   │   ├── all-recent.lua
+│       │   │   │   ├── file-browser.lua
+│       │   │   │   ├── frecuency.lua
+│       │   │   │   ├── headings.lua
+│       │   │   │   ├── import.lua
+│       │   │   │   ├── lazy.lua
+│       │   │   │   ├── live-grep.lua
+│       │   │   │   ├── luasnip.lua
+│       │   │   │   ├── media.lua
+│       │   │   │   ├── repo.lua
+│       │   │   │   ├── telescope-extended.lua
+│       │   │   │   ├── undotree.lua
+│       │   │   │   ├── urlview.lua
+│       │   │   │   ├── workspaces.lua
+│       │   │   │   └── zoxide.lua
+│       │   │   ├── terminal
+│       │   │   │   ├── floaterm.lua
+│       │   │   │   └── toggleterm.lua
+│       │   │   ├── treesitter-playground.lua
+│       │   │   ├── trouble-extended.lua
+│       │   │   └── winshift.lua
+│       │   ├── formatting
+│       │   │   ├── prettier-extended.lua
+│       │   │   ├── ruff.lua
+│       │   │   ├── rustywind.lua
+│       │   │   ├── shfmt.lua
+│       │   │   ├── trim_newlines.lua
+│       │   │   └── trim_whitespace.lua
+│       │   ├── lang
+│       │   │   ├── ansible-extended.lua
+│       │   │   ├── bash.lua
+│       │   │   ├── docker-extended.lua
+│       │   │   ├── git-extended.lua
+│       │   │   ├── go-extended.lua
+│       │   │   ├── haskell.lua
+│       │   │   ├── json-extended.lua
+│       │   │   ├── julia.lua
+│       │   │   ├── markdown-extended.lua
+│       │   │   ├── nix-extended.lua
+│       │   │   ├── omnisharp-extended.lua
+│       │   │   ├── pkl.lua
+│       │   │   ├── python-extended.lua
+│       │   │   ├── rust-extended.lua
+│       │   │   ├── sql-extended.lua
+│       │   │   ├── web
+│       │   │   │   ├── angular-extended.lua
+│       │   │   │   ├── astro-extended.lua
+│       │   │   │   ├── graphql.lua
+│       │   │   │   ├── html-css.lua
+│       │   │   │   ├── htmx.lua
+│       │   │   │   ├── php-extended.lua
+│       │   │   │   ├── svelte-extended.lua
+│       │   │   │   ├── tailwind-extended.lua
+│       │   │   │   ├── typescript-extended.lua
+│       │   │   │   ├── vue-2.lua
+│       │   │   │   └── vue-3-extended.lua
+│       │   │   ├── xml.lua
+│       │   │   ├── yaml-extended.lua
+│       │   │   └── zig.lua
+│       │   ├── linting
+│       │   │   ├── biome.lua
+│       │   │   ├── eslint-extended.lua
+│       │   │   ├── pylint.lua
+│       │   │   ├── selene.lua
+│       │   │   ├── typos.lua
+│       │   │   └── vale.lua
+│       │   ├── lsp
+│       │   │   ├── actions-preview.lua
+│       │   │   ├── file-operations.lua
+│       │   │   ├── garbage-day.lua
+│       │   │   ├── glance.lua
+│       │   │   ├── inc-rename.lua
+│       │   │   ├── lens.lua
+│       │   │   ├── lightbulb.lua
+│       │   │   ├── lspconfig-extended.lua
+│       │   │   ├── mason-extended.lua
+│       │   │   ├── neodim.lua
+│       │   │   ├── symbol-usage.lua
+│       │   │   └── workspace-diagnostics.lua
+│       │   ├── ui
+│       │   │   ├── block.lua
+│       │   │   ├── breadcrumbs.lua
+│       │   │   ├── bufferline-extended.lua
+│       │   │   ├── colorful-winsep.lua
+│       │   │   ├── colorschemes
+│       │   │   │   ├── bamboo.lua
+│       │   │   │   ├── boo.lua
+│       │   │   │   ├── catppuccin.lua
+│       │   │   │   ├── cyberdream.lua
+│       │   │   │   ├── doom-one.lua
+│       │   │   │   ├── dracula.lua
+│       │   │   │   ├── edge.lua
+│       │   │   │   ├── everblush.lua
+│       │   │   │   ├── everforest.lua
+│       │   │   │   ├── fluoromachine.lua
+│       │   │   │   ├── github.lua
+│       │   │   │   ├── gruvbox-material.lua
+│       │   │   │   ├── gruvbox.lua
+│       │   │   │   ├── helix.lua
+│       │   │   │   ├── horizon.lua
+│       │   │   │   ├── hybrid.lua
+│       │   │   │   ├── iceberg.lua
+│       │   │   │   ├── juliana.lua
+│       │   │   │   ├── kanagawa.lua
+│       │   │   │   ├── material.lua
+│       │   │   │   ├── melange.lua
+│       │   │   │   ├── mellifluous.lua
+│       │   │   │   ├── miasma.lua
+│       │   │   │   ├── mini-base16.lua
+│       │   │   │   ├── modus.lua
+│       │   │   │   ├── monokai-pro.lua
+│       │   │   │   ├── moonfly.lua
+│       │   │   │   ├── moonlight.lua
+│       │   │   │   ├── neosolarized.lua
+│       │   │   │   ├── nightfly.lua
+│       │   │   │   ├── nightfox.lua
+│       │   │   │   ├── nord.lua
+│       │   │   │   ├── nordic.lua
+│       │   │   │   ├── nvimgelion.lua
+│       │   │   │   ├── oceanic.lua
+│       │   │   │   ├── onedark.lua
+│       │   │   │   ├── onedarkpro.lua
+│       │   │   │   ├── onenord.lua
+│       │   │   │   ├── oxocarbon.lua
+│       │   │   │   ├── poimandres.lua
+│       │   │   │   ├── rasmus.lua
+│       │   │   │   ├── rose-pine.lua
+│       │   │   │   ├── sherbet.lua
+│       │   │   │   ├── solarized-osaka.lua
+│       │   │   │   ├── sonokai.lua
+│       │   │   │   ├── synthweave.lua
+│       │   │   │   ├── tokyonight.lua
+│       │   │   │   ├── vscode.lua
+│       │   │   │   ├── zenbones.lua
+│       │   │   │   └── zephyrium.lua
+│       │   │   ├── comment-box.lua
+│       │   │   ├── context.lua
+│       │   │   ├── dashboard-extended.lua
+│       │   │   ├── diagflow.lua
+│       │   │   ├── edgy-extended.lua
+│       │   │   ├── fidget.lua
+│       │   │   ├── helpview.lua
+│       │   │   ├── highlight-colors.lua
+│       │   │   ├── highlight-undo.lua
+│       │   │   ├── image.lua
+│       │   │   ├── img-clip.lua
+│       │   │   ├── import-cost.lua
+│       │   │   ├── inline-fold.lua
+│       │   │   ├── log-highlight.lua
+│       │   │   ├── lualine-extended.lua
+│       │   │   ├── minimap.lua
+│       │   │   ├── modes.lua
+│       │   │   ├── modicator.lua
+│       │   │   ├── noice-extended.lua
+│       │   │   ├── nvim-notify-extended.lua
+│       │   │   ├── rainbow-delimeters.lua
+│       │   │   ├── reactive.lua
+│       │   │   ├── scrollbar.lua
+│       │   │   ├── smooth-scrolling.lua
+│       │   │   ├── specs.lua
+│       │   │   ├── status-column.lua
+│       │   │   ├── sunglasses.lua
+│       │   │   ├── theme-loader.lua
+│       │   │   ├── tiny-inline-diagnostic.lua
+│       │   │   ├── transparent.lua
+│       │   │   ├── which-key-extended.lua
+│       │   │   ├── windows.lua
+│       │   │   └── zen-mode.lua
+│       │   └── util
+│       │       ├── autosave.lua
+│       │       ├── better-escape.lua
+│       │       ├── bigfile.lua
+│       │       ├── cloak.lua
+│       │       ├── discordrcp.lua
+│       │       ├── dotfyle.lua
+│       │       ├── esqueleto.lua
+│       │       ├── hardtime.lua
+│       │       ├── hawtkeys.lua
+│       │       ├── icon-picker.lua
+│       │       ├── kitty-scrollback.lua
+│       │       ├── leetcode.lua
+│       │       ├── live-command.lua
+│       │       ├── live-share.lua
+│       │       ├── mason-lock.lua
+│       │       ├── mise.lua
+│       │       ├── neovide.lua
+│       │       ├── no-neck-pain.lua
+│       │       ├── persisted.lua
+│       │       ├── persistence-extended.lua
+│       │       ├── pomo.lua
+│       │       ├── rest-extended.lua
+│       │       ├── scrollEOF.lua
+│       │       ├── smart-splits.lua
+│       │       ├── speedtyper.lua
+│       │       ├── tmux.lua
+│       │       ├── vim-be-good.lua
+│       │       ├── vscode.lua
+│       │       ├── wakatime.lua
+│       │       ├── yadm.lua
+│       │       └── yazi.lua
+│       └── lazyvim
+│           ├── extras.lua
+│           └── included.lua
+├── mason-lock.json
+├── rules
+│   ├── biome.json
+│   ├── cspell.json
+│   ├── rustfmt.toml
+│   └── stylua.toml
+├── snippets
+│   ├── languages
+│   │   ├── css.json
+│   │   ├── global.json
+│   │   ├── lua.json
+│   │   ├── markdown.json
+│   │   └── python
+│   │       └── python.json
+│   ├── package.json
+│   └── projects
+│       └── nvim.json
+├── spell
+│   ├── en.utf-8.add
+│   ├── en.utf-8.add.spl
+│   ├── en.utf-8.spl
+│   ├── en.utf-8.sug
+│   ├── es.utf-8.spl
+│   └── es.utf-8.sug
+├── stylua.toml
+└── templates
+    ├── LICENSE
+    │   ├── Apache2.0
+    │   ├── GNUGPLv3
+    │   ├── MIT
+    │   └── Unlicensed
+    ├── go
+    │   └── main.go
+    ├── html
+    │   └── index.html
+    ├── python
+    │   └── main.py
+    └── vue
+        └── component.vue
+
+39 directories, 317 files
+```
