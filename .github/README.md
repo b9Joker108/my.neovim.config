@@ -1248,3 +1248,22 @@ and enjoyable to use.
 
 39 directories, 317 files
 ```
+
+# Changes I have made:
+
+Made a new file for `hrsh7th/nvim-cmp` and populated: 
+lua/plugins/extras/coding/cmp/cmp.lua
+
+
+**Plugin Declaration**: Specifies hrsh7th/nvim-cmp 
+along with dependencies.
+**Event Triggers**: Loads the plugin on InsertEnter
+and CmdlineEnter to optimize startup time.
+**Dependencies**:
+  **Completion Sources**: Adds LSP, buffer, path, and 
+command-line completion sources.
+  **Snippet Support**: Includes LuaSnip and its completion 
+source for snippet expansion.
+**Configuration Function**: Sets up the completion 
+behaviour and key mappings.
+
