@@ -2040,25 +2040,175 @@ By understanding the structure and purpose of your configuration, you'll be bett
 39 directories, 317 files
 ```
 
-# Changes I have made:
+# Setting up the Distribution Locally
 
-Made a new file for `hrsh7th/nvim-cmp` and populated: 
-lua/plugins/extras/coding/cmp/cmp.lua
+This Dotfyle Neovim bespoke distribution takes some endeavour after installation to set up the configutation and its plugins in the local environment. This needn't be done all at once or immediately. I am doing it incrementally and documenting it.
 
+On my Termux GNU/Linux userland environment I aim to use this configuration in a number of user accounts, privileged and unprivileged in relation to `sudo` provileges, and in a number of Termux proot chroots. I am currently setting it up in my premier Termux Debian proot chroot in the account of an unprivileged user and documenting the experience. It has been anything but direct and straight forward. But, I feel, if I do it a few times in different Termux host and proot chroot environments, and refine the documentation each time, I should be able to streamline the process for myself and others. Neovim is an incredibly powerful scriptable editor, extensible with the Lua programming language. It is somewhat of a rite of passage to go from vanilla Vim and vanilla Neovim, to a Neovim IDE and from there, to a PDE. It is mandatory to get under the hood and tinker and fine-tune a Neovim PDE. This is a learning curve. But, the 'god-mode' developer and coding powers it provides are invaluable.
 
-**Plugin Declaration**: Specifies hrsh7th/nvim-cmp 
-along with dependencies.
+The first thing I noted after some endeavour installing the distribution, is that out of 259 plugins, the console states only 108 are working, with 43 loaded and 65 unloaded.
 
-**Event Triggers**: Loads the plugin on InsertEnter
-and CmdlineEnter to optimize startup time.
+Here are some insights and suggestions on getting the balance working:
 
-**Dependencies**:
+---
 
->  **Completion Sources**: Adds LSP, buffer, path, and 
-command-line completion sources.
-> 
->  **Snippet Support**: Includes LuaSnip and its completion source for snippet expansion.
+### **1. Plugin Loading Mechanisms**
 
-**Configuration Function**: Sets up the completion 
-behaviour and key mappings.
+**Lazy Loading:**
+
+- **Explanation:** The Lazy package manager supports lazy loading of plugins, meaning some plugins are only loaded when required (e.g., when you open a specific file type or invoke a certain command).
+- **Impact:** Lazily loaded plugins might not appear in the list of active plugins when you check them in the console unless their loading condition has been met.
+- **Suggestion:** Review your `lazy.lua` configuration (found at `lua/config/lazy.lua`) to see which plugins are set to load lazily. You can temporarily disable lazy loading for troubleshooting purposes.
+
+**Conditional Plugin Loading:**
+
+- **Explanation:** Plugins may be configured to load only under certain conditions or in specific file types.
+- **Suggestion:** Check the plugin configuration files in `lua/plugins/` and `after/ftplugin/` directories to identify any conditional loading settings.
+
+---
+
+### **2. Verifying Plugin Installation**
+
+**Ensure All Plugins Are Installed:**
+
+- **Suggestion:** Run `:Lazy sync` or `:Lazy install` in Neovim to install any missing plugins.
+- **Check Installation Logs:** Look for any errors during installation that might prevent plugins from being available.
+
+---
+
+### **3. Checking for Plugin Conflicts or Errors**
+
+**Review Error Messages:**
+
+- **Suggestion:** Open Neovim's log file or run `:messages` after startup to check for any errors related to plugin loading.
+- **Common Issues:** There might be issues like missing dependencies, incorrect configuration, or compatibility problems causing some plugins not to load.
+
+---
+
+### **4. Examining Plugin Counts**
+
+**Understanding the Plugin Count Discrepancy:**
+
+- **Dependencies Counted Separately:** Some plugins have dependencies that are managed separately, which might inflate the total plugin count.
+- **Inactive Plugins:** Plugins that are installed but disabled won't appear in the active plugin list.
+- **Suggestion:** Compare the plugin list from the console with the entries in your `lazy-lock.json` and `dotfyle.json` to see which plugins are not loading.
+
+---
+
+### **5. Optimizing Plugin Management**
+
+**Organize and Audit Plugins:**
+
+- **Suggestion:** Given the large number of plugins, consider auditing them to ensure each one adds value to your workflow.
+- **Remove Redundancies:** Identify and remove plugins with overlapping functionalities to streamline your setup.
+
+---
+
+### **6. Enhancing Configuration Management**
+
+**Version Control:**
+
+- **Suggestion:** Ensure your configuration is under version control using Git. This allows you to track changes and roll back if necessary.
+- **Benefit:** Helps in collaborative settings and when experimenting with new plugins or configurations.
+
+**Documentation:**
+
+- **Suggestion:** Add comments to your configuration files explaining the purpose of each plugin and any custom settings.
+- **Benefit:** Improves maintainability and makes it easier to troubleshoot in the future.
+
+---
+
+### **7. Testing Plugins Individually**
+
+**Isolate Plugins:**
+
+- **Suggestion:** Temporarily disable all plugins and enable them one by one or in small groups to identify if a particular plugin is causing issues.
+- **Method:** Comment out plugin configurations in your `lua/plugins/` directory and gradually uncomment them.
+
+---
+
+### **8. Utilize Plugin Management Commands**
+
+**Lazy Plugin Manager Dashboard:**
+
+- **Suggestion:** Use `:Lazy` to open the Lazy package manager dashboard within Neovim.
+- **Benefit:** Provides a visual interface to manage plugins, see their statuses, and perform actions like update, clean, and sync.
+
+---
+
+### **9. Reviewing Specific Plugin Configurations**
+
+**Verify Critical Plugins:**
+
+- **Suggestion:** Pay special attention to essential plugins like `lspconfig`, `treesitter`, and completion frameworks (`cmp`). Errors in these can affect other plugins.
+
+---
+
+### **10. Community Resources**
+
+**Refer to Documentation:**
+
+- **Suggestion:** Consult the Lazy package manager documentation and Neovim community resources for best practices.
+- **Benefit:** Stay updated on common issues and solutions shared by other users.
+
+---
+
+### **Conclusion**
+
+By systematically reviewing your plugin configurations and the loading mechanisms, you should be able to identify why only a subset of your plugins are discoverable in the console. Focusing on simplifying and documenting your setup will also enhance performance and maintainability.
+
+If you encounter specific errors or need further assistance with certain plugins, please provide the details, and I'll be happy to help you troubleshoot them.
+
+---
+
+**Additional Tips:**
+
+- **Regular Updates:** Keep your plugins up to date to benefit from the latest features and fixes.
+- **Backup Configurations:** Before making significant changes, back up your current configurations.
+- **Community Engagement:** Consider sharing your configuration on platforms like GitHub for feedback and suggestions from the Neovim community.
+
+# Manual Actions Undertaken to Set Up Distribution Locally
+
+The console is most helpful in managing the 
+distribution and its configuration, but circumventing 
+the console and interacting directly with the Neovim 
+shell is most useful. Open up a new document and try: 
+`:Mason`, `:Lazy install` and `:Lazy sync`, for 
+example. NB: `:messages` is most helpful identifying 
+distro config setup todos.
+
+# Manual actions and choices required to set up distro and config
+
+1. Setting up WakaTime. Type the Vim command:
+`:WakaTimeApiKey` to enter your WakaTime API Key.
+Find yours at: https://wakatime.com/api-key
+
+2. Setting up Codeium. First, go to the Codeium
+website, create an account and login. Now, you need
+to generate a Codeium API Key. First, make sure the
+appropriate environment variable is set in your shell
+configuration, to automatically open the Android
+default Internet browser Android application from the
+Termux console as required. In Debian, in my .zshrc
+I added:
+
+```zsh
+# Set the browser environment variable
+export BROWSER="am start --user 0 -a android.intent.action.VIEW -d"
+```
+
+After this, I opened up a new document in Neovim 
+and then executed: `:Codeium Auth` which should 
+open the generated API key/token within a webpage 
+in the Android system's default Internet browser. 
+Copy the key/token and paste it where requested 
+in Neovom. 
+
+3. Error executing vim.schedule lua callback: vim/keymap.lua:0: Invalid buffer id: 
+ stack traceback:
+> [C]: in function 'nvim_buf_set_keymap'
+> vim/keymap.lua: in function 'set'
+>...ovim.config/lazy/LazyVim/lua/lazyvim/config/autocmds.lua:76: in function <...ovim.config/lazy/LazyVim/lua/lazyvim/config/
+      autocmds.lua:75>
+
 
