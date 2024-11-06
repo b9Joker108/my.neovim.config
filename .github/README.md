@@ -2211,4 +2211,10 @@ in Neovom.
 >...ovim.config/lazy/LazyVim/lua/lazyvim/config/autocmds.lua:76: in function <...ovim.config/lazy/LazyVim/lua/lazyvim/config/
       autocmds.lua:75>
 
-
+4. The repository for gitsigns-yadm has been updated to https://github.com/purarue/gitsigns-yadm.nvim
+Please update your configuration to that URL
+Could not determine location of yadm repo, pass it to setup() like:
+require("gitsigns-yadm").setup({ yadm_repo_git = "~/path/to/repo.git" })
+Mason package path not found for **debugpy**:
+- `/venv/bin/python`
+You may need to force update the package.
