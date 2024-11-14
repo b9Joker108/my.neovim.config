@@ -2220,3 +2220,6 @@ require("gitsigns-yadm").setup({ yadm_repo_git = "~/path/to/repo.git" })
 Mason package path not found for **debugpy**:
 - `/venv/bin/python`
 You may need to force update the package.
+
+5. I added the plugin: 'nomnivore/ollama.nvim', refer project: https://github.com/nomnivore/ollama.nvim
+But, as yet, I have not got it working.
