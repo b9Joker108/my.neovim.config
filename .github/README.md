@@ -2166,6 +2166,8 @@ If you encounter specific errors or need further assistance with certain plugins
 - **Regular Updates:** Keep your plugins up to date to benefit from the latest features and fixes.
 - **Backup Configurations:** Before making significant changes, back up your current configurations.
 - **Community Engagement:** Consider sharing your configuration on platforms like GitHub for feedback and suggestions from the Neovim community.
+- **LuaRocks:** Install `luacheck` with `luarocks` which is a Lua linter and use it to ensure updated Neovim configurations conform to Lua syntax specifications, refer:
+  https://github.com/lunarmodules/luacheck
 
 # Manual Actions Undertaken to Set Up Distribution Locally
 
