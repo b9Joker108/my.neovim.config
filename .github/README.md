@@ -2204,7 +2204,7 @@ and then executed: `:Codeium Auth` which should
 open the generated API key/token within a webpage 
 in the Android system's default Internet browser. 
 Copy the key/token and paste it where requested 
-in Neovom. 
+in Neovim. 
 
 3. Error executing vim.schedule lua callback: vim/keymap.lua:0: Invalid buffer id: 
  stack traceback:
