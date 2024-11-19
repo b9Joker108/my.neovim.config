@@ -6,6 +6,8 @@ return {
   { "Exafunction/codeium.nvim", optional = true },
   { "echasnovski/mini.surround", optional = true },
   { "JoosepAlviste/nvim-ts-context-commentstring", optional = true },
+  -- Beauford added ollama.nvim on 14/11/2024
+  { "nomnivore/ollama.nvim", optional = true },
 
   -- DAP
   { "jbyuki/one-small-step-for-vimkind", optional = true },

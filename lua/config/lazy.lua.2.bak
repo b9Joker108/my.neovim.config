@@ -1,0 +1,83 @@
+-- lua/config/lazy.lua
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.uv.fs_stat(lazypath) then
+  -- Bootstrap lazy.nvim
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+
+vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+
+-- **Add Error Handling Before `lazy.setup`**
+-- Attempt to load config.options
+local status_opts, err_opts = pcall(require, "config.options")
+if not status_opts then
+  vim.notify("Error loading config.options: " .. err_opts, vim.log.levels.ERROR)
+end
+
+-- Attempt to load config.keymaps
+local status_kmaps, err_kmaps = pcall(require, "config.keymaps")
+if not status_kmaps then
+  vim.notify("Error loading config.keymaps: " .. err_kmaps, vim.log.levels.ERROR)
+end
+
+-- Now proceed to set up lazy.nvim
+local status_lazy, err_lazy = pcall(function()
+  require("lazy").setup({
+    spec = {
+      {
+        "LazyVim/LazyVim",
+        import = "lazyvim.plugins",
+        opts = {
+          colorscheme = "catppuccin",
+        },
+      },
+      {
+        import = "plugins",
+      },
+    },
+    ui = {
+      backdrop = 100,
+    },
+    defaults = {
+      lazy = true,
+      version = false, -- always use the latest git commit
+      -- version = "*", -- try installing the latest stable version for plugins that support semver
+    },
+    log = { -- Logging configuration
+      level = "debug", -- Change to 'info' for standard logs or 'debug' for more detailed logs
+      path = vim.fn.stdpath("cache") .. "/lazy.log", -- Default is ~/.local/share/nvim/lazy/lazy.log
+    },
+    local_spec = true,
+    checker = { enabled = true }, -- Automatically check for plugin updates
+    performance = {
+      cache = {
+        enabled = true,
+        -- disable_events = {},
+      },
+      rtp = {
+        -- Disable some rtp plugins
+        disabled_plugins = {
+          "gzip",
+          "tarPlugin",
+          "tohtml",
+          "tutor",
+          "netrwPlugin",
+          "zipPlugin",
+        },
+      },
+    },
+  })
+end)
+
+if not status_lazy then
+  vim.notify("Error setting up lazy.nvim: " .. err_lazy, vim.log.levels.ERROR)
+end

@@ -1,8 +1,10 @@
+-- lua/config/options.lua
+
 local go = vim.g
 local o = vim.opt
 
--- Optimizations on startup
-vim.loader.enable()
+-- Initialize lazyvim_statuscolumn if it doesn't exist
+go.lazyvim_statuscolumn = go.lazyvim_statuscolumn or {}
 
 -- Personal Config and LazyVim global options
 go.lualine_info_extras = false
@@ -18,9 +20,11 @@ go.maplocalleader = "\\"
 go.autoformat = true
 
 -- Font
-go.gui_font_default_size = 10
-go.gui_font_size = go.gui_font_default_size
-go.gui_font_face = "JetBrainsMono Nerd Font"
+if vim.fn.has('gui_running') == 1 then
+  go.gui_font_default_size = 10
+  go.gui_font_size = go.gui_font_default_size
+  go.gui_font_face = "JetBrainsMono Nerd Font"
+end
 
 -- Enable EditorConfig integration
 go.editorconfig = true
@@ -31,6 +35,9 @@ go.root_spec = {
   { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
   "cwd",
 }
+
+-- Terminal
+o.termguicolors = true -- Added to see if it resolves errors
 
 -- Disable annoying cmd line stuff
 o.showcmd = false

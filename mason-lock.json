@@ -1,4 +1,5 @@
 {
+  "basedpyright": "1.20.0",
   "bash-language-server": "5.4.2",
   "codelldb": "v1.10.0",
   "css-lsp": "4.10.0",
@@ -9,20 +10,20 @@
   "eslint-lsp": "4.10.0",
   "html-lsp": "4.10.0",
   "htmlhint": "1.1.4",
-  "js-debug-adapter": "v1.94.0",
+  "js-debug-adapter": "v1.95.1",
   "json-lsp": "4.10.0",
-  "lua-language-server": "3.11.1",
+  "lua-language-server": "3.12.0",
   "markdown-toc": "1.2.0",
   "markdownlint-cli2": "0.14.0",
   "marksman": "2024-10-07",
   "prettier": "3.3.3",
   "prettierd": "0.25.3",
+  "ruff": "0.7.2",
   "shellcheck": "v0.10.0",
   "shfmt": "v3.10.0",
   "stylelint": "16.10.0",
   "stylua": "v0.20.0",
   "taplo": "0.9.3",
   "vtsls": "0.2.6",
-  "yaml-language-server": "1.15.0",
-
+  "yaml-language-server": "1.15.0"
 }
