@@ -1,4 +1,4 @@
--- Here are the plugins that are included in LazyVim and I didnt change
+-- Here are the plugins that are included in LazyVim and I didnt change:
 
 return {
   -- Coding

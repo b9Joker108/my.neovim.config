@@ -1,3 +1,5 @@
+-- keymaps.lua
+
 local map = vim.keymap.set
 local o = vim.opt
 
@@ -13,21 +15,37 @@ map("n", "<leader>?", searching_brave, { noremap = true, silent = true, desc = "
 map("n", "<leader>l", "<Nop>")
 map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
 -- stylua: ignore start
-map("n", "<leader>ld", function() vim.fn.system({ "xdg-open", "https://lazyvim.org" }) end, { desc = "LazyVim Docs" })
-map("n", "<leader>lr", function() vim.fn.system({ "xdg-open", "https://github.com/LazyVim/LazyVim" }) end, { desc = "LazyVim Repo" })
-map("n", "<leader>lx", "<cmd>LazyExtras<cr>", { desc = "Extras" })
-map("n", "<leader>lc", function() LazyVim.news.changelog() end, { desc = "LazyVim Changelog" })
+map("n", "<leader>ld", function()
+  vim.fn.system({ "xdg-open", "https://lazyvim.org" })
+end, { desc = "LazyVim Docs" })
 
-map("n", "<leader>lu", function() lazy.update() end, { desc = "Lazy Update" })
-map("n", "<leader>lC", function() lazy.check() end, { desc = "Lazy Check" })
-map("n", "<leader>ls", function() lazy.sync() end, { desc = "Lazy Sync" })
+map("n", "<leader>lr", function()
+  vim.fn.system({ "xdg-open", "https://github.com/LazyVim/LazyVim" })
+end, { desc = "LazyVim Repo" })
+
+map("n", "<leader>lx", "<cmd>LazyExtras<cr>", { desc = "Extras" })
+map("n", "<leader>lc", function()
+  LazyVim.news.changelog()
+end, { desc = "LazyVim Changelog" })
+
+map("n", "<leader>lu", function()
+  lazy.update()
+end, { desc = "Lazy Update" })
+
+map("n", "<leader>lC", function()
+  lazy.check()
+end, { desc = "Lazy Check" })
+
+map("n", "<leader>ls", function()
+  lazy.sync()
+end, { desc = "Lazy Sync" })
 -- stylua: ignore end
 
 -- Disable LazyVim bindings
 map("n", "<leader>L", "<Nop>")
 map("n", "<leader>fT", "<Nop>")
 
--- Identation
+-- Indentation
 map("n", "<", "<<", { desc = "Deindent" })
 map("n", ">", ">>", { desc = "Indent" })
 
@@ -36,9 +54,9 @@ map("n", "<A-s>", "<cmd>noautocmd w<CR>", { desc = "Save Without Formatting" })
 
 -- Cursor navigation on insert mode
 map("i", "<M-h>", "<left>", { desc = "Move Cursor Left" })
-map("i", "<M-l>", "<right>", { desc = "Move Cursor Left" })
-map("i", "<M-j>", "<down>", { desc = "Move Cursor Left" })
-map("i", "<M-k>", "<up>", { desc = "Move Cursor Left" })
+map("i", "<M-l>", "<right>", { desc = "Move Cursor Right" })
+map("i", "<M-j>", "<down>", { desc = "Move Cursor Down" })
+map("i", "<M-k>", "<up>", { desc = "Move Cursor Up" })
 
 -- End of the word backwards
 map("n", "E", "ge")
@@ -52,9 +70,11 @@ map("n", "]<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "[<tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 map("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<s-tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
 for i = 1, 9 do
   map("n", "<leader><tab>" .. i, "<cmd>tabn " .. i .. "<cr>", { desc = "Tab " .. i })
 end
+
 map("n", "<leader>f<tab>", function()
   vim.ui.select(vim.api.nvim_list_tabpages(), {
     prompt = "Select Tab:",
@@ -115,6 +135,7 @@ map("n", "[/", "?\\S\\zs\\s*╭<CR>zt", { desc = "Prev Block Comment" })
 -- Plugin Info
 map("n", "<leader>cif", "<cmd>LazyFormatInfo<cr>", { desc = "Formatting" })
 map("n", "<leader>cic", "<cmd>ConformInfo<cr>", { desc = "Conform" })
+
 local linters = function()
   local linters_attached = require("lint").linters_by_ft[vim.bo.filetype]
   local buf_linters = {}
@@ -129,9 +150,9 @@ local linters = function()
   end
 
   local unique_client_names = table.concat(buf_linters, ", ")
-  local linters = string.format("%s", unique_client_names)
+  local linters_str = string.format("%s", unique_client_names)
 
-  LazyVim.notify(linters, { title = "Linter" })
+  LazyVim.notify(linters_str, { title = "Linter" })
 end
 map("n", "<leader>ciL", linters, { desc = "Lint" })
 map("n", "<leader>cir", "<cmd>LazyRoot<cr>", { desc = "Root" })
@@ -193,10 +214,13 @@ if not LazyVim.has("floaterm.nvim") or not LazyVim.has("toggleterm.nvim") then
   local lazyterm = function()
     LazyVim.terminal(nil, { size = { width = 0.8, height = 0.8 }, cwd = LazyVim.root() })
   end
+
   map("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
+  
   map("n", "<leader>fT", function()
     LazyVim.terminal(nil, { size = { width = 0.8, height = 0.8 }, cwd = vim.fn.getcwd() })
   end, { desc = "Terminal (cwd)" })
+  
   map("n", [[<c-\>]], lazyterm, { desc = "Terminal (Root Dir)" })
   map("t", [[<c-\>]], "<cmd>close<cr>", { desc = "Hide Terminal" })
 end
@@ -211,6 +235,7 @@ map("n", "dm", function()
       return
     end
   end
+  
   -- Delete global marks
   local cur_buf = vim.api.nvim_win_get_buf(vim.api.nvim_get_current_win())
   for _, mark in ipairs(vim.fn.getmarklist()) do
@@ -229,7 +254,7 @@ map("n", "go", "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>", { desc
 map({ "c", "i", "t" }, "<M-BS>", "<C-w>", { desc = "Delete Word" })
 
 -- Git
-map("n", "<leader>ghb", LazyVim.lazygit.blame_line, { desc = "Blame Line" })
+-- map("n", "<leader>ghb", Snacks.lazygit.blame_line, { desc = "Blame Line" })
 
 -- Windows Split
 map("n", "<leader>_", "<C-W>s", { desc = "Split Window Below", remap = true })

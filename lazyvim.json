@@ -8,6 +8,7 @@
     "lazyvim.plugins.extras.util.dot",
     "plugins.extras.coding.ai.codecompanion",
     "plugins.extras.coding.ai.codeium",
+    "plugins.extras.coding.ai.ollama",
     "plugins.extras.coding.annotation",
     "plugins.extras.coding.cmp-extended",
     "plugins.extras.coding.multicursor",
@@ -33,6 +34,7 @@
     "plugins.extras.editor.search-replace",
     "plugins.extras.editor.suda",
     "plugins.extras.editor.telescope.zoxide",
+    "plugins.extras.editor.terminal.toggleterm",
     "plugins.extras.editor.trouble-extended",
     "plugins.extras.formatting.prettier-extended",
     "plugins.extras.formatting.trim_newlines",
@@ -77,7 +79,7 @@
     "plugins.extras.util.yazi"
   ],
   "news": {
-    "NEWS.md": "6520"
+    "NEWS.md": "7429"
   },
-  "version": 6
+  "version": 7
 }
