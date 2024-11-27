@@ -2062,3 +2062,44 @@ command-line completion sources.
 **Configuration Function**: Sets up the completion 
 behaviour and key mappings.
 
+# Initiatives and Integrations
+
+I am really smitten by AppImages, since one recently solved and resolved my protracted 
+conundrum, that took much effort, trial and error and problem-solving, creativity and 
+luck to resolve. I was endeavouring to install the proprietary closed source Obsidian 
+personal knowledge management system (PKMS) application and framework in a `proot-distro` 
+alias of Debian GNU/Linux aarch64 `proot` chroot in an unprivileged user account in an 
+unrooted Termux GNU/Linux host userland installation on a Samsung Galaxy Tab S9 Ultra 
+host environment on Android 14 with the stock Samsung One UI 6.1.1 OS. This is the 
+principal handheld device portable programming environment, a chroot, in which I use, 
+develop and tweak my Neovim Dotfyle distribution. I do most of my Python coding in this 
+environment as I have Miniforg3 anaconda/miniconda/`conda` in this chroot and Jupyter 
+Notebook and Jupyter Labs, as well. In addition, I have various CLI tools in this 
+environment for interacting with the Obsidian API and I want to set up a RAG system of 
+all my PDFs, documents, notes and annotations, from various fields of human knowledges, 
+academic disciplines and fields of inquiry and various topics of discussions from 
+different perspectives from my research and endeavours over a lifetime that constitute 
+a number of corpora in an Obsidian vault in this environment and endeavour to 
+programatically customise, interact with and query with computational languages as well 
+as interact with dynamically through different GerativeAI and LLMs tools: open source, 
+closed source, served locally and remotely by a variety of Neovim Obsidian plugins and 
+non-Obsidian plugin CLI packages and other CLI tools. There are also FOSS Obsidian 
+plugins and Neovim plugins that leverage LLMs and GenAI which are extensible, rather 
+than recreating the wheel. Moreover, there are Neovim plugins for Obsidian and 
+interacting with Obsidian and the vault. Anyway, over a number of days, I endeavoured 
+and ventured so many different ways and packaging systems to install Obsidian within my 
+unrooted aarch64 proot chroot alias of Debian GNU/Linux, without success. That is, by 
+happenstance, until I unpacked an AppImage of Obsidian (Obsidian-1.7.7-arm64.AppImage) 
+with its internal extraction/unpacking protocol: `--appimage-extract` flag from within 
+its inherent embedded runtime, leveraged from the squashfuse library and launched it in 
+an XFCE4 GUI with the VNC Viewer Android app. This delighted me no end. I know this is 
+all too much information and not strictly on-topic, but it is a practical exemplar in 
+defense of the weblog post topic and hence, why I have posted it, as some Neovim user may 
+find it vicariously useful, just as I found an aside on this subreddit thread 
+immeasurably useful, that mentioned the project: `musl`, for which I am most thankful. 
+The `musl` project is profoundly useful, for amongst other things, it constitutes a 
+lightweight and portable Standard C Library implementation, that may be embedded or 
+nested within a given AppImage to make it a static binary, which in turn may be 
+constituted by a suite of modules of static binaries, comparable to the functionality
+of the Busybox-like class of CLI applications. In my humble opinion, AppImages 
+are truly incredible.

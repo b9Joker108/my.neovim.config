@@ -6,6 +6,7 @@
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.dot",
+    "plugins.extras.coding.ai.avante",
     "plugins.extras.coding.ai.codecompanion",
     "plugins.extras.coding.ai.codeium",
     "plugins.extras.coding.ai.ollama",
