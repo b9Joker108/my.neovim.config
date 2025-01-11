@@ -2256,19 +2256,20 @@ different GerativeAI and LLMs tools: open source, closed source, served locally
 and remotely by a variety of Neovim Obsidian plugins and non-Obsidian plugin CLI 
 packages and other CLI tools. There are also FOSS Obsidian plugins and Neovim 
 plugins that leverage LLMs and GenAI which are extensible, rather than 
-recreating the wheel. Moreover, there are Neovim plugins for Obsidian and                                    
-interacting with Obsidian and the vault. Anyway, over a number of days, I 
-endeavoured and ventured so many different ways and packaging systems to 
-install Obsidian within my unrooted aarch64 proot chroot alias of Debian 
-GNU/Linux, without success. That is, by happenstance, until I unpacked an 
-AppImage of Obsidian (Obsidian-1.7.7-arm64.AppImage) with its internal 
-extraction/unpacking protocol: `--appimage-extract` flag from within its 
-inherent embedded runtime, leveraged from the squashfuse library and launched it 
-in an XFCE4 GUI with the VNC Viewer Android app. This delighted me no end. I 
-know this is all too much information and not strictly on-topic, but it is a 
-practical exemplar in defense of the weblog post topic and hence, why I have 
-posted it, as some Neovim user may find it vicariously useful, just as I found 
-an aside on this subreddit thread immeasurably useful, that mentioned the 
+recreating the wheel. Moreover, there are Neovim plugins for Obsidian and 
+interacting with Obsidian and the vault.                                
+
+Anyway, over a number of days, I endeavoured and ventured so many different ways 
+and packaging systems to install Obsidian within my unrooted aarch64 proot 
+chroot alias of Debian GNU/Linux, without success. That is, by happenstance, 
+until I unpacked an AppImage of Obsidian (Obsidian-1.7.7-arm64.AppImage) with 
+its internal extraction/unpacking protocol: `--appimage-extract` flag from 
+within its inherent embedded runtime, leveraged from the squashfuse library and 
+launched it in an XFCE4 GUI with the VNC Viewer Android app. This delighted me 
+no end. I know this is all too much information and not strictly on-topic, but 
+it is a practical exemplar in defense of the weblog post topic and hence, why I 
+have posted it, as some Neovim user may find it vicariously useful, just as I 
+found an aside on this subreddit thread immeasurably useful, that mentioned the 
 project: `musl`, for which I am most thankful. The `musl` project is profoundly 
 useful, for amongst other things, it constitutes a lightweight and portable 
 Standard C Library implementation, that may be embedded or nested within a given 
