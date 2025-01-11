@@ -2295,7 +2295,7 @@ This command lists all key mappings that are active in normal mode.
 This command lists all key mappings that are active in insert mode.
 
 ### Visual Mode Mappings
-```mvim
+```nvim
 :vmap
 ```
 This command lists all key mappings that are active in visual mode.
