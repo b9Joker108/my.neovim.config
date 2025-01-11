@@ -26,6 +26,7 @@
     "plugins.extras.editor.compiler",
     "plugins.extras.editor.docs.devdocs",
     "plugins.extras.editor.docs.obsidian",
+    "plugins.extras.editor.docs.vimwiki",
     "plugins.extras.editor.flash-extended",
     "plugins.extras.editor.git.diffview",
     "plugins.extras.editor.gitsigns-extended",
@@ -74,13 +75,12 @@
     "plugins.extras.util.neovide",
     "plugins.extras.util.persistence-extended",
     "plugins.extras.util.smart-splits",
-    "plugins.extras.util.vscode",
     "plugins.extras.util.wakatime",
     "plugins.extras.util.yadm",
     "plugins.extras.util.yazi"
   ],
   "news": {
-    "NEWS.md": "7429"
+    "NEWS.md": "10960"
   },
   "version": 7
 }
