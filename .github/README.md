@@ -2277,3 +2277,25 @@ AppImage to make it a static binary, which in turn may be constituted by a suite
 of modules of static binaries, comparable to the functionality of the 
 Busybox-like class of CLI applications. In my humble opinion, AppImages are truly 
 incredible.
+
+## Command to List Key Mappings for the Different Editing Modes
+
+Use the following commands in Neovim to list the key mappings:
+
+### Normal Mode Mappings
+```nvim
+:nmap
+```
+This command lists all key mappings that are active in normal mode.
+
+### Insert Mode Mappings
+```nvim
+:imap
+```
+This command lists all key mappings that are active in insert mode.
+
+### Visual Mode Mappings
+```mvim
+:vmap
+```
+This command lists all key mappings that are active in visual mode.
