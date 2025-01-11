@@ -2182,44 +2182,93 @@ distro config setup todos.
 # Manual actions and choices required to set up distro and config
 
 1. Setting up WakaTime. Type the Vim command:
-`:WakaTimeApiKey` to enter your WakaTime API Key.
-Find yours at: https://wakatime.com/api-key
+   `:WakaTimeApiKey` to enter your WakaTime API Key.
+   Find yours at: https://wakatime.com/api-key
 
 2. Setting up Codeium. First, go to the Codeium
-website, create an account and login. Now, you need
-to generate a Codeium API Key. First, make sure the
-appropriate environment variable is set in your shell
-configuration, to automatically open the Android
-default Internet browser Android application from the
-Termux console as required. In Debian, in my .zshrc
-I added:
+   website, create an account and login. Now, you need
+   to generate a Codeium API Key. First, make sure the
+   appropriate environment variable is set in your shell
+   configuration, to automatically open the Android
+   default Internet browser Android application from the
+   Termux console as required. In Debian, in my .zshrc
+   I added:
 
-```zsh
-# Set the browser environment variable
-export BROWSER="am start --user 0 -a android.intent.action.VIEW -d"
-```
+   ```zsh
+   # Set the browser environment variable
+   export BROWSER="am start --user 0 -a android.intent.action.VIEW -d"
+   ```
 
-After this, I opened up a new document in Neovim 
-and then executed: `:Codeium Auth` which should 
-open the generated API key/token within a webpage 
-in the Android system's default Internet browser. 
-Copy the key/token and paste it where requested 
-in Neovim. 
+   After this, I opened up a new document in Neovim 
+   and then executed: `:Codeium Auth` which should 
+   open the generated API key/token within a webpage 
+   in the Android system's default Internet browser. 
+   Copy the key/token and paste it where requested 
+   in Neovim. 
 
 3. Error executing vim.schedule lua callback: vim/keymap.lua:0: Invalid buffer id: 
- stack traceback:
-> [C]: in function 'nvim_buf_set_keymap'
-> vim/keymap.lua: in function 'set'
->...ovim.config/lazy/LazyVim/lua/lazyvim/config/autocmds.lua:76: in function <...ovim.config/lazy/LazyVim/lua/lazyvim/config/
-      autocmds.lua:75>
+   stack traceback:
+   > [C]: in function 'nvim_buf_set_keymap'
+   > vim/keymap.lua: in function 'set'
+   >...ovim.config/lazy/LazyVim/lua/lazyvim/config/autocmds.lua:76: in function 
+   <...ovim.config/lazy/LazyVim/lua/lazyvim/config/autocmds.lua:75>
 
-4. The repository for gitsigns-yadm has been updated to https://github.com/purarue/gitsigns-yadm.nvim
-Please update your configuration to that URL
-Could not determine location of yadm repo, pass it to setup() like:
-require("gitsigns-yadm").setup({ yadm_repo_git = "~/path/to/repo.git" })
-Mason package path not found for **debugpy**:
-- `/venv/bin/python`
-You may need to force update the package.
+4. The repository for gitsigns-yadm has been updated to: 
+   https://github.com/purarue/gitsigns-yadm.nvim
+   Please update your configuration to that URL
+   Could not determine location of yadm repo, pass it to setup() like:
+   require("gitsigns-yadm").setup({ yadm_repo_git = "~/path/to/repo.git" })
+   Mason package path not found for **debugpy**:
+   - `/venv/bin/python`
+   You may need to force update the package.
 
-5. I added the plugin: 'nomnivore/ollama.nvim', refer project: https://github.com/nomnivore/ollama.nvim
-It only took me the small part of an evening to get my first added plugin to a distribution coded by another working. I still don't understand enough about the mechanisms that bind the distribution together enough to significantly restructure it or structure my own from scratch, but I am onway. Lua is also finally making more sense to me.
+5. I added the plugin: 'nomnivore/ollama.nvim', refer project: 
+   https://github.com/nomnivore/ollama.nvim
+   It only took me the small part of an evening to get my first added plugin to a 
+   distribution coded by another working. I still don't understand enough about the 
+   mechanisms that bind the distribution together enough to significantly restructure 
+   it or structure my own from scratch, but I am onway. Lua is also finally making 
+   more sense to me.
+
+# NOTES TO BE INTEGRATED
+# Initiatives and Integrations
+
+I am really smitten by AppImages, since one recently solved and resolved my protracted                            
+conundrum, that took much effort, trial and error and problem-solving, creativity and
+luck to resolve. I was endeavouring to install the proprietary closed source Obsidian
+personal knowledge management system (PKMS) application and framework in a `proot-distro`                         
+alias of Debian GNU/Linux aarch64 `proot` chroot in an unprivileged user account in an
+unrooted Termux GNU/Linux host userland installation on a Samsung Galaxy Tab S9 Ultra
+host environment on Android 14 with the stock Samsung One UI 6.1.1 OS. This is the
+principal handheld device portable programming environment, a chroot, in which I use,
+develop and tweak my Neovim Dotfyle distribution. I do most of my Python coding in this
+environment as I have Miniforg3 anaconda/miniconda/`conda` in this chroot and Jupyter
+Notebook and Jupyter Labs, as well. In addition, I have various CLI tools in this
+environment for interacting with the Obsidian API and I want to set up a RAG system of
+all my PDFs, documents, notes and annotations, from various fields of human knowledges,
+academic disciplines and fields of inquiry and various topics of discussions from                                 
+different perspectives from my research and endeavours over a lifetime that constitute                            
+a number of corpora in an Obsidian vault in this environment and endeavour to                                     
+programatically customise, interact with and query with computational languages as well                           
+as interact with dynamically through different GerativeAI and LLMs tools: open source,
+closed source, served locally and remotely by a variety of Neovim Obsidian plugins and                            
+non-Obsidian plugin CLI packages and other CLI tools. There are also FOSS Obsidian                                
+plugins and Neovim plugins that leverage LLMs and GenAI which are extensible, rather                              
+than recreating the wheel. Moreover, there are Neovim plugins for Obsidian and                                    
+interacting with Obsidian and the vault. Anyway, over a number of days, I endeavoured                             
+and ventured so many different ways and packaging systems to install Obsidian within my                           
+unrooted aarch64 proot chroot alias of Debian GNU/Linux, without success. That is, by
+happenstance, until I unpacked an AppImage of Obsidian (Obsidian-1.7.7-arm64.AppImage)
+with its internal extraction/unpacking protocol: `--appimage-extract` flag from within
+its inherent embedded runtime, leveraged from the squashfuse library and launched it in
+an XFCE4 GUI with the VNC Viewer Android app. This delighted me no end. I know this is
+all too much information and not strictly on-topic, but it is a practical exemplar in
+defense of the weblog post topic and hence, why I have posted it, as some Neovim user may
+find it vicariously useful, just as I found an aside on this subreddit thread
+immeasurably useful, that mentioned the project: `musl`, for which I am most thankful.
+The `musl` project is profoundly useful, for amongst other things, it constitutes a
+lightweight and portable Standard C Library implementation, that may be embedded or
+nested within a given AppImage to make it a static binary, which in turn may be
+constituted by a suite of modules of static binaries, comparable to the functionality
+of the Busybox-like class of CLI applications. In my humble opinion, AppImages
+are truly incredible.

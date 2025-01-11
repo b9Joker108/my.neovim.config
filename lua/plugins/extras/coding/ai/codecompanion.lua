@@ -1,5 +1,12 @@
+-- lua/plugins/extras/coding/codecompanion.lua
+
 local prefix = "<leader>a"
 local user = vim.env.USER or "User"
+
+-- Function to retrieve the Ollama API URL from the environment
+local function get_ollama_api_url()
+  return "http://" .. (vim.fn.getenv("OLLAMA_HOST") or "127.0.0.1") .. ":" .. (vim.fn.getenv("OLLAMA_PORT") or "11434")
+end
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "CodeCompanionChatAdapter",
@@ -17,12 +24,13 @@ return {
     cmd = { "CodeCompanion", "CodeCompanionActions", "CodeCompanionToggle", "CodeCompanionAdd", "CodeCompanionChat" },
     opts = {
       adapters = {
-        deepseek_coder = function()
+        ["qwen2.5-coder"] = function()
           return require("codecompanion.adapters").extend("ollama", {
-            name = "deepseek_coder",
+            name = "qwen2.5-coder",
+	    api_url = get_ollama_api_url(),  -- Dynamically use the API URL
             schema = {
               model = {
-                default = "deepseek-coder-v2:latest",
+                default = "qwen2.5-coder:1.5b",
               },
             },
           })
@@ -30,7 +38,7 @@ return {
       },
       strategies = {
         chat = {
-          adapter = "deepseek_coder",
+          adapter = "qwen2.5-coder",
           roles = {
             llm = "  CodeCompanion",
             user = " " .. user:sub(1, 1):upper() .. user:sub(2),
@@ -40,8 +48,8 @@ return {
             stop = { modes = { n = "<C-c>" } },
           },
         },
-        inline = { adapter = "deepseek_coder" },
-        agent = { adapter = "deepseek_coder" },
+        inline = { adapter = "qwen2.5-coder" },
+        agent = { adapter = "qwen2.5-coder" },
       },
       display = {
         chat = {

@@ -1,5 +1,5 @@
 return {
-  { "seanbreckenridge/gitsigns-yadm.nvim" },
+  { "purarue/gitsigns-yadm.nvim" },
   {
     "lewis6991/gitsigns.nvim",
     opts = {
