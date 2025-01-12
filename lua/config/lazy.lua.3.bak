@@ -1,5 +1,4 @@
--- FILE: ~/.config/nvim/lua/config/lazy.lua
--- UPDATED: Saturday, January 11, 2025
+-- lua/config/lazy.lua
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
