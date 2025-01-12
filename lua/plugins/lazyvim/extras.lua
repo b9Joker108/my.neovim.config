@@ -1,4 +1,6 @@
--- Here are the plugins from the extras that are included in LazyVim and I didnt change
+-- FILE: ~/.config/nvim/lua/plugins/lazyvim/extras.lua 
+-- UPDATED: Saturday, January 11, 2025
+-- NOTE: Here are the plugins from the extras that are included in LazyVim and I didnt change
 
 return {
   -- Coding

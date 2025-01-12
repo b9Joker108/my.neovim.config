@@ -1,6 +1,3 @@
--- FILE: ~/.config/nvim/lua/plugins/extras/coding/ai/codeium.lua
--- UPDATED: Saturday, January 11, 2025
-
 return {
   {
     "Exafunction/codeium.vim",
